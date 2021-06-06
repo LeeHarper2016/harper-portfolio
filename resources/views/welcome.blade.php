@@ -27,5 +27,8 @@
                 <a href="#contact" class="hover:text-gray-800 text-xl duration-300">Contact</a>
             </nav>
         </header>
+        <main class="w-screen h-screen bg-white">
+
+        </main>
     </body>
 </html>
