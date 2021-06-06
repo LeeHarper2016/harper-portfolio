@@ -20,7 +20,12 @@
     </head>
     <body class="antialiased">
         <header class="w-screen h-screen bg-red-500">
-
+            <nav class="flex justify-around p-5 font-bold">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </header>
     </body>
 </html>
