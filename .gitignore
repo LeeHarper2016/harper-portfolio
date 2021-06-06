@@ -22,6 +22,3 @@ Homestead.json
 .idea/modules.xml
 .idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd
 .idea/commandlinetools/Laravel_6_6_21__10_15_AM.xml
-public/css/app.css
-public/js/app.js
-public/mix-manifest.json
