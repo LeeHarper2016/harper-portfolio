@@ -19,7 +19,7 @@
         <script src="{{ asset('js/app.js') }}"></script>
     </head>
     <body class="antialiased">
-        <header class="w-screen h-screen bg-red-500">
+        <header class="w-screen h-screen bg-header-bg bg-cover">
             <nav class="flex justify-around p-5 font-bold">
                 <a href="#about" class="hover:text-gray-800 text-xl duration-300">About</a>
                 <a href="#experience" class="hover:text-gray-800 text-xl duration-300">Experience</a>
