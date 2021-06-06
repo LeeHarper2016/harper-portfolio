@@ -21,10 +21,10 @@
     <body class="antialiased">
         <header class="w-screen h-screen bg-red-500">
             <nav class="flex justify-around p-5 font-bold">
-                <a href="#about">About</a>
-                <a href="#experience">Experience</a>
-                <a href="#education">Education</a>
-                <a href="#contact">Contact</a>
+                <a href="#about" class="hover:text-gray-800 text-xl duration-300">About</a>
+                <a href="#experience" class="hover:text-gray-800 text-xl duration-300">Experience</a>
+                <a href="#education" class="hover:text-gray-800 text-xl duration-300">Education</a>
+                <a href="#contact" class="hover:text-gray-800 text-xl duration-300">Contact</a>
             </nav>
         </header>
     </body>
