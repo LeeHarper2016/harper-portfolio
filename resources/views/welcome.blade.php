@@ -19,6 +19,8 @@
         <script src="{{ asset('js/app.js') }}"></script>
     </head>
     <body class="antialiased">
+        <header class="w-screen h-screen bg-red-500">
 
+        </header>
     </body>
 </html>
