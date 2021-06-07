@@ -1,6 +1,13 @@
 <template>
-	<div class="w-screen h-screen fixed bg-gray-600 bg-opacity-75 top-0 left-0 z-10">
-		test
+	<div>
+		<button @click="toggleVisibility" 
+				class="p-3 bg-red-400 rounded-lg border-purple-800 text-center">
+			Edit
+		</button>
+		<div v-if="visible" 
+			 class="w-screen h-screen fixed bg-gray-600 bg-opacity-75 top-0 left-0 z-10"
+			 @click="toggleVisibility">
+		</div>
 	</div>
 </template>
 
@@ -9,6 +16,16 @@
 
 <script type="text/javascript">
 	export default {
-		name: 'Modal'
+		name: 'Modal',
+		data() {
+			return {
+				visible: false
+			}
+		},
+		methods: {
+			toggleVisibility() {
+				this.visible = !this.visible
+			}
+		}
 	};
 </script>
