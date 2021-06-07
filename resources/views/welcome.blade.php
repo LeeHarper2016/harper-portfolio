@@ -16,39 +16,41 @@
         </style>
 
         <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
     <body class="antialiased">
-        <header class="w-screen h-screen bg-header-bg bg-cover bg-fixed">
-            <nav class="flex justify-around p-5 font-bold">
-                <a href="#about" class="hover:text-gray-800 text-xl duration-300">About</a>
-                <a href="#experience" class="hover:text-gray-800 text-xl duration-300">Experience</a>
-                <a href="#education" class="hover:text-gray-800 text-xl duration-300">Education</a>
-                <a href="#contact" class="hover:text-gray-800 text-xl duration-300">Contact</a>
-            </nav>
-        </header>
-        <main class="w-screen h-screen bg-white border-t-4 border-purple-600">
-            <div class="p-8">
-                <h2 class="font-bold text-3xl mb-3">About Me</h2>
-                <hr class="border-purple-800 w-1/4">
-                <div class="flex justify-between">
-                    <p class="w-2/3">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <img src="{{ asset('/images/developer.png') }}" alt="A photo of the developer" class="w-56 h-72 block ml-auto mr-auto rounded-lg border-purple-800 border-4">
+        <div id="app">
+            <header class="w-screen h-screen bg-header-bg bg-cover bg-fixed">
+                <nav class="flex justify-around p-5 font-bold">
+                    <a href="#about" class="hover:text-gray-800 text-xl duration-300">About</a>
+                    <a href="#experience" class="hover:text-gray-800 text-xl duration-300">Experience</a>
+                    <a href="#education" class="hover:text-gray-800 text-xl duration-300">Education</a>
+                    <a href="#contact" class="hover:text-gray-800 text-xl duration-300">Contact</a>
+                </nav>
+            </header>
+            <main class="w-screen h-screen bg-white border-t-4 border-purple-600">
+                <div class="p-8">
+                    <h2 class="font-bold text-3xl mb-3">About Me</h2>
+                    <hr class="border-purple-800 w-1/4">
+                    <div class="flex justify-between">
+                        <p class="w-2/3">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                        <img src="{{ asset('/images/developer.png') }}" alt="A photo of the developer" class="w-56 h-72 block ml-auto mr-auto rounded-lg border-purple-800 border-4">
+                    </div>
                 </div>
-            </div>
-        </main>
+            </main>
+        </div>
     </body>
 </html>
