@@ -31,7 +31,7 @@
             <div class="p-8">
                 <h2 class="font-bold text-3xl mb-3">About Me</h2>
                 <hr class="border-purple-800 w-1/4">
-                <div class="flex">
+                <div class="flex justify-between">
                     <p class="w-2/3">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -46,6 +46,7 @@
                         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
+                    <img src="{{ asset('/images/developer.png') }}" alt="A photo of the developer" class="w-56 h-72 block ml-auto mr-auto rounded-lg border-purple-800 border-4">
                 </div>
             </div>
         </main>
