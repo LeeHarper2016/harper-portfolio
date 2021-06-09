@@ -2,7 +2,7 @@
 	<div>
 		<button @click="toggleVisibility" 
 				:class="button_classes ? button_classes : ''">
-			Edit
+				<slot name="button_text"></slot>
 		</button>
 		<transition name="fade">
 			<div v-if="visible" 
