@@ -13,6 +13,10 @@
 					<h2 class="text-center font-bold text-2xl">
 						<slot name="header"></slot>
 					</h2>
+					<div class="p-5">
+						<slot name="content">
+						</slot>
+					</div>
 				</div>
 			</div>
 		</transition>
