@@ -71,9 +71,38 @@
                 </div>
             </main>
             @auth
-            <div class="ml-auto mr-auto rounded-full border-2 border-purple-800 font-bold p-2 w-10 text-center mb-10 cursor-pointer">
-                +
-            </div>
+            <modal button_classes="ml-auto mr-auto rounded-full border-2 border-purple-800 font-bold p-2 w-10 text-center mb-10 cursor-pointer">
+                <template #button_text>
+                    +
+                </template> 
+                <template #header>
+                    Add A Section
+                </template>
+                <template #content><div>
+                    <form action="/components" method="POST" class="flex flex-col items-center space-y-6 font-normal" enctype="multipart/form-data">
+                        @csrf
+                        <label for="anchor">
+                            Anchor Tag:
+                            <input type="text" name="anchor" id="anchor" class="border rounded-md block">
+                        </label>
+                        <label for="title">
+                            Section Title:
+                            <input type="text" name="title" id="title" class="border rounded-md block">
+                        </label>
+                        <label for="body">
+                            Section Body:
+                            <input type="text" name="body" id="body" class="border rounded-md block">
+                        </label>
+                        <label for="image">
+                            Section Image:
+                            <input type="file" name="image" id="image" class="border rounded-md block">
+                        </label>
+                        <button type="submit" class="border border-purple-800 rounded-lg p-3 bg-purple-300">
+                            Submit
+                        </button>
+                    </form>
+                </template>
+            </modal>
             @endauth
         </div>
     </body>
