@@ -24,6 +24,29 @@
                 <nav class="flex justify-around p-5 font-bold">
                     <a href="#about" class="hover:text-gray-800 text-xl duration-300">About</a>
                     <a href="#experience" class="hover:text-gray-800 text-xl duration-300">Experience</a>
+                    <modal class="inline" button_classes="hover:text-gray-800 text-xl font-bold duration-300">
+                        <template #button_text>
+                            Login
+                        </template>
+                        <template #header>
+                            Log In
+                        </template>
+                        <template #content>
+                            <form action="" method="POST" class="flex flex-col items-center space-y-6 font-normal">
+                                <label for="username">
+                                    Username:
+                                    <input type="text" name="username" id="username" class="border rounded-md block">
+                                </label>
+                                <label for="password">
+                                    Password:
+                                    <input type="password" name="password" id="password" class="border rounded-md block">
+                                </label>
+                                <button type="submit" class="border border-purple-800 rounded-lg p-3 bg-purple-300">
+                                    Log In
+                                </button>
+                            </form>
+                        </template>
+                    </modal>
                     <a href="#education" class="hover:text-gray-800 text-xl duration-300">Education</a>
                     <a href="#contact" class="hover:text-gray-800 text-xl duration-300">Contact</a>
                 </nav>
