@@ -70,6 +70,11 @@
                     </div>
                 </div>
             </main>
+            @auth
+            <div class="ml-auto mr-auto rounded-full border-2 border-purple-800 font-bold p-2 w-10 text-center mb-10 cursor-pointer">
+                +
+            </div>
+            @endauth
         </div>
     </body>
 </html>
