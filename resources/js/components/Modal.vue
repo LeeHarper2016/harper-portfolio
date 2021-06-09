@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<button @click="toggleVisibility" 
-				class="p-3 bg-red-400 rounded-lg border-purple-800 text-center">
+				:class="button_classes ? button_classes : ''">
 			Edit
 		</button>
 		<transition name="fade">
@@ -21,7 +21,7 @@
 
 <style scoped>
 .fade-enter-active, .fade-leave-active {
-	transition: opacity 0.75s ease;
+	transition: opacity 0.65s ease;
 }
 .fade-enter, .fade-leave-to {
 	opacity: 0;
@@ -31,6 +31,7 @@
 <script type="text/javascript">
 	export default {
 		name: 'Modal',
+		props: ['button_classes'],
 		data() {
 			return {
 				visible: false
