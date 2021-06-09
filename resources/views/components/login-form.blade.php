@@ -1,8 +1,9 @@
 <div>
-    <form action="" method="POST" class="flex flex-col items-center space-y-6 font-normal">
-        <label for="email">
-            Email:
-            <input type="text" name="email" id="email" class="border rounded-md block">
+    <form action="/login" method="POST" class="flex flex-col items-center space-y-6 font-normal">
+        @csrf
+        <label for="name">
+            Username:
+            <input type="text" name="name" id="name" class="border rounded-md block">
         </label>
         <label for="password">
             Password:
