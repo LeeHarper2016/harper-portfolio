@@ -1,7 +1,7 @@
 <div>
     <form action="" method="POST" class="flex flex-col items-center space-y-6 font-normal">
-        <label for="username">
-            Username:
+        <label for="email">
+            Email:
             <input type="text" name="username" id="username" class="border rounded-md block">
         </label>
         <label for="password">
