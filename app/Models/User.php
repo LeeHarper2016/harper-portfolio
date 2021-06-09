@@ -40,4 +40,21 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    /*********************************************************************************************************************************************************************
+     *
+     * Function: User.setPasswordAttribute().
+     * Purpose: Hashes the password entered for the new User before it is stored to the database.
+     * Precondition: A password has been originally supplied.
+     * Postcondition: The newly hashed password is saved to the user within the database.
+     *
+     * @param  string  $cleanPassword The unhashed password value.
+     * @return void
+     *
+     ********************************************************************************************************************************************************************/
+    protected function setPasswordAttribute(string $cleanPassword)
+    {
+        $this->attributes['password'] = Hash::make($cleanPassword);
+    }
 }
