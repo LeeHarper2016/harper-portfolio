@@ -15,8 +15,10 @@ class CreateTextComponentsTable extends Migration
     {
         Schema::create('text_components', function (Blueprint $table) {
             $table->id();
+            $table->string('anchor');
             $table->string('title');
             $table->longtext('body');
+            $table->string('img_src');
             $table->timestamps();
         });
     }
