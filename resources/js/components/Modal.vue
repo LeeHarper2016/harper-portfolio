@@ -10,7 +10,7 @@
 				 @click="toggleVisibility">
 				<div class="rounded-lg bg-white w-full h-full p-10"
 					 @click.stop>
-					<h2 class="text-center font-bold text-2xl">
+					<h2 class="text-center font-bold text-4xl">
 						<slot name="header"></slot>
 					</h2>
 					<div class="p-5">
