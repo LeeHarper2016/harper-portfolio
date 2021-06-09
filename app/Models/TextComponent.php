@@ -10,7 +10,9 @@ class TextComponent extends Model
     use HasFactory;
 
     public $attributes = [
+        'anchor',
         'title',
-        'body'
+        'body',
+        'img_src'
     ];
 }
