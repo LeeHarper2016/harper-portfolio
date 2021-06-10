@@ -24,6 +24,7 @@
                 <nav class="flex justify-around p-5 font-bold">
                     <a href="#about" class="hover:text-gray-800 text-xl duration-300">About</a>
                     <a href="#experience" class="hover:text-gray-800 text-xl duration-300">Experience</a>
+                    @guest
                     <modal class="inline" button_classes="hover:text-gray-800 text-xl font-bold duration-300">
                         <template #button_text>
                             Login
@@ -35,6 +36,7 @@
                             <x-login-form />
                         </template>
                     </modal>
+                    @endguest
                     <a href="#education" class="hover:text-gray-800 text-xl duration-300">Education</a>
                     <a href="#contact" class="hover:text-gray-800 text-xl duration-300">Contact</a>
                 </nav>
