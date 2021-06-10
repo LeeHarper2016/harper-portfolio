@@ -15,4 +15,11 @@ class TextComponent extends Model
         'body',
         'img_src'
     ];
+
+    public $fillable = [
+        'anchor',
+        'title',
+        'body',
+        'img_src'
+    ];
 }
