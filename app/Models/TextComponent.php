@@ -9,13 +9,6 @@ class TextComponent extends Model
 {
     use HasFactory;
 
-    public $attributes = [
-        'anchor',
-        'title',
-        'body',
-        'img_src'
-    ];
-
     public $fillable = [
         'anchor',
         'title',
