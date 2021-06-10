@@ -94,7 +94,9 @@
                             </label>
                             <label for="body">
                                 Section Body:
-                                <input type="text" name="body" id="body" class="border rounded-md block">
+                                <textarea cols="50" rows="5" id="body" name="body" class="border rounded-md block">
+                                    
+                                </textarea>
                             </label>
                             <label for="image">
                                 Section Image:
