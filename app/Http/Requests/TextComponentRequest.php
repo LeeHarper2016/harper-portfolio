@@ -27,7 +27,7 @@ class TextComponentRequest extends FormRequest
             'anchor' => ['required', 'Unique:App\Models\TextComponent,anchor'],
             'title' => ['required'],
             'body' => ['required'],
-            'image' => ['required']
+            'image' => ['required', 'image']
         ];
     }
 }
