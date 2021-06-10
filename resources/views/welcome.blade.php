@@ -82,7 +82,7 @@
                         Add A Section
                     </template>
                     <template #content><div>
-                        <form action="/components" method="POST" class="flex flex-col items-center space-y-6 font-normal" enctype="multipart/form-data">
+                        <form action="/component/text" method="POST" class="flex flex-col items-center space-y-6 font-normal" enctype="multipart/form-data">
                             @csrf
                             <label for="anchor">
                                 Anchor Tag:
