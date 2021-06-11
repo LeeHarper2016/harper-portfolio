@@ -24,7 +24,12 @@ class PositionRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'company_name' => ['required'],
+            'position' => ['required'],
+            'body' => ['required'],
+            'description' => ['required'],
+            'img_src' => ['required'],
+            'img_alt' => ['required']
         ];
     }
 }
