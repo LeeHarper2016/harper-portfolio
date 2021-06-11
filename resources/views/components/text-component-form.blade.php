@@ -6,7 +6,7 @@
         <template #header>
             Add A Section
         </template>
-        <template #content><div>
+        <template #content>
             <form action="/component/text" method="POST" class="flex flex-col items-center space-y-6 font-normal" enctype="multipart/form-data">
                 @csrf
                 <label for="anchor">
