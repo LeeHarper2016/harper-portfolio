@@ -13,7 +13,7 @@ class TextComponentRequest extends FormRequest
      */
     public function authorize()
     {
-        return auth()->user()->id === 1;
+        return !is_null(auth()->user());
     }
 
     /**
