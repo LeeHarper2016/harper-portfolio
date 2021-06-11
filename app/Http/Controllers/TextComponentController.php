@@ -21,8 +21,6 @@ class TextComponentController extends Controller
     public function store(TextComponentRequest $request) {
         $componentImage = $request->image;
 
-        dd('test');
-
         $component = TextComponent::updateOrCreate([
             "name" => $request->name
         ],
