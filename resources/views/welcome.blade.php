@@ -93,6 +93,7 @@
                          alt="{{ $sections[0]->img_alt ?? '' }}" class="w-56 h-72 block ml-auto mr-auto rounded-lg border-purple-800 border-4">
                     </div>
                 </div>
+                <experience-slideshow></experience-slideshow>
             </main>
         </div>
     </body>
