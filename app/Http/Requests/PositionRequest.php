@@ -28,7 +28,7 @@ class PositionRequest extends FormRequest
             'position' => ['required'],
             'body' => ['required'],
             'description' => ['required'],
-            'img_src' => ['required'],
+            'image' => ['required', 'image'],
             'img_alt' => ['required']
         ];
     }
