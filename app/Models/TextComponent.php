@@ -14,7 +14,6 @@ class TextComponent extends Model
         'title',
         'body',
         'img_src',
-
         'img_alt'
     ];
 }
