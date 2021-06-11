@@ -56,10 +56,7 @@
                         <template #content>
                             <form action="/component/text" method="POST" class="flex flex-col items-center space-y-6 font-normal" enctype="multipart/form-data">
                                 @csrf
-                                <label for="anchor">
-                                    Anchor Tag:
-                                    <input type="text" name="anchor" id="anchor" class="border rounded-md block">
-                                </label>
+                                <input type="text" name="name" id="name" value="about" class="border rounded-md block">
                                 <label for="title">
                                     Section Title:
                                     <input type="text" name="title" id="title" class="border rounded-md block">
