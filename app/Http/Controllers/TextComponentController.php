@@ -29,7 +29,7 @@ class TextComponentController extends Controller
         [
             "title" => $request->title,
             "body" => $request->body,
-            "img_src" => $componentImage->hashName(),
+            "img_src" => 'images/uploaded/' . $componentImage->hashName(),
             "img_alt" => $request->img_alt
         ]);
 
