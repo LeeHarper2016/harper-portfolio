@@ -1,6 +1,6 @@
 <template>
 	<div class="absolute top-5 left-0 w-full h-24 space-y-5">
-		<ErrorMessage v-for="errors as error" :error='error'>
+		<ErrorMessage v-for="error of errors" :error='error'>
 			
 		</ErrorMessage>
 	</div>
