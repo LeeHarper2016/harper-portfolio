@@ -45,6 +45,7 @@
             </header>
             <main class="w-full bg-white border-t-4 border-purple-600">
                 <div class="p-8">
+                    <a name="about"></a>
                     <h2 class="inline-block font-bold text-3xl mb-3 mr-5">{{ $sections[0]->title ?? 'About Me' }}</h2>
                     <modal class="inline" button_classes="p-1.5 bg-red-400 rounded-lg border-purple-800 text-center">
                         <template #button_text>
