@@ -13,7 +13,7 @@
 					<h2 class="text-center font-bold text-4xl">
 						<slot name="header"></slot>
 					</h2>
-					<div class="p-5">
+					<div class="p-5 h-full overflow-y-scroll">
 						<slot name="content">
 						</slot>
 					</div>
