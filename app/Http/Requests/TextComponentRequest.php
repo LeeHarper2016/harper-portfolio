@@ -24,7 +24,7 @@ class TextComponentRequest extends FormRequest
     public function rules()
     {
         return [
-            'anchor' => ['required', 'Unique:App\Models\TextComponent,anchor'],
+            'name' => ['required']
             'title' => ['required'],
             'body' => ['required'],
             'img_alt' => ['required'],

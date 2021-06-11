@@ -10,7 +10,7 @@ class TextComponent extends Model
     use HasFactory;
 
     public $fillable = [
-        'anchor',
+        'name',
         'title',
         'body',
         'img_src',

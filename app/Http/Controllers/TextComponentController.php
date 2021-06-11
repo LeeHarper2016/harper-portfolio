@@ -19,11 +19,14 @@ class TextComponentController extends Controller
      * 
      *****************************************************************************************************************************************************/
     public function store(TextComponentRequest $request) {
-        $component = new TextComponent;
         $componentImage = $request->image;
 
-        TextComponent::create([
-            "anchor" => $request->anchor,
+        dd('test');
+
+        $component = TextComponent::updateOrCreate([
+            "name" => $request->name
+        ],
+        [
             "title" => $request->title,
             "body" => $request->body,
             "img_src" => $componentImage->hashName(),
