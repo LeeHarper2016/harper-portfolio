@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TextComponentController;
 
 /*
@@ -16,9 +17,7 @@ use App\Http\Controllers\TextComponentController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'view']);
 
 Route::post('/login', [AuthController::class, 'logInUser']);
 Route::post('/component/text', [TextComponentController::class, 'store']);
