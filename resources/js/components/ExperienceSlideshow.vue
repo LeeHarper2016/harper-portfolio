@@ -16,80 +16,7 @@
 		    	<button class="bg-purple-400 rounded-lg p-3 border border-purple-800">
 		    		More Info
 		    	</button>
-                <Modal class="inline" 
-                	   button_classes="bg-purple-400 rounded-lg p-3 border border-purple-800">
-                    <template #button_text>
-                        Add Position
-                    </template>
-                    <template #header>
-                        Add A Position
-                    </template>
-                    <template #content>
-                    	<form action="/positions" 
-                    		  method="POST" 
-                    		  class="flex flex-col items-center space-y-6 font-normal" 
-                    		  enctype="multipart/form-data">
-                    		  <input type="hidden"
-                    		  		 name="_token"
-                    		  		 :value="csrfToken">
-	                        <label for="company_name">
-	                            Company Name:
-	                            <input type="text" 
-	                            	   name="company_name" 
-	                            	   id="company_name" 
-	                            	   class="border rounded-md block">
-	                        </label>
-	                        <label for="position">
-	                            Position:
-	                            <input type="text" 
-	                            	   name="position" 
-	                            	   id="position" 
-	                            	   class="border rounded-md block">
-	                        </label>
-	                        <label for="body">
-	                            Section Body:
-	                            <textarea cols="50" 
-	                            		  rows="5" 
-	                            		  id="body" 
-	                            		  name="body" 
-	                            		  class="border rounded-md block">
-	                                
-	                            </textarea>
-	                        </label>
-	                        <label for="description">
-	                            Section Description:
-	                            <textarea cols="50" 
-	                            		  rows="5" 
-	                            		  id="description" 
-	                            		  name="description" 
-	                            		  class="border rounded-md block">
-	                                
-	                            </textarea>
-	                        </label>
-	                        <label for="image">
-	                            Section Image:
-	                            <input type="file" 
-	                            	   name="image" 
-	                            	   id="image" 
-	                            	   class="border rounded-md block">
-	                        </label>
-	                        <label for="img_alt">
-	                            Image Description:
-	                            <textarea cols="50" 
-	                            		  rows="5" 
-	                            		  id="img_alt" 
-	                            		  name="img_alt" 
-	                            		  class="border rounded-md block">
-	                                
-	                            </textarea>
-	                        </label>
-	                        <button type="submit" 
-	                        		class="border border-purple-800 rounded-lg p-3 bg-purple-300">
-	                            Submit
-	                        </button>
-	                    </form>
-                    </template>
-                </Modal>
+		    	<ExperienceSlideshowForm></ExperienceSlideshowForm>
 		    	<button class="bg-red-400 rounded-lg p-3 border border-purple-800">
 		    		Delete Position
 		    	</button>
@@ -104,10 +31,12 @@
 
 <script type="text/javascript">
 	import Modal from './Modal';
+	import ExperienceSlideshowForm from './ExperienceSlideshowForm'
 
 	export default {
 		name: 'ExperienceSlideshow',
 		components: {
+			ExperienceSlideshowForm,
 			Modal
 		},
 		data() {
@@ -120,11 +49,6 @@
 					img_src: '',
 					img_alt: ''
 				}
-			}
-		},
-		computed: {
-			csrfToken() {
-            	return document.querySelector('meta[name="csrf-token"]').content;
 			}
 		}
 	};
