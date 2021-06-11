@@ -43,7 +43,7 @@
             </header>
             <main class="w-full bg-white border-t-4 border-purple-600">
                 <div class="p-8">
-                    <h2 class="inline-block font-bold text-3xl mb-3 mr-5">About Me</h2>
+                    <h2 class="inline-block font-bold text-3xl mb-3 mr-5">{{ $sections[0]->title ?? 'About Me' }}</h2>
                     <modal class="inline" button_classes="p-1.5 bg-red-400 rounded-lg border-purple-800 text-center">
                         <template #button_text>
                             Edit Section
@@ -55,26 +55,13 @@
                     <hr class="border-purple-800 w-1/4">
                     <div class="flex justify-between">
                         <p class="w-2/3">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            {{ $sections[0]->body ?? 'This is the default text for a section.' }}
                         </p>
-                        <img src="{{ asset('/images/developer.png') }}" alt="A photo of the developer" class="w-56 h-72 block ml-auto mr-auto rounded-lg border-purple-800 border-4">
+                        <img src="{{ isset($sections[0]->img_src) ? asset($sections[0]->img_src) : asset('/images/default.jpg') }}"
+                         alt="{{ $sections[0]->img_alt ?? '' }}" class="w-56 h-72 block ml-auto mr-auto rounded-lg border-purple-800 border-4">
                     </div>
                 </div>
             </main>
-            @auth
-                <x-text-component-form />
-            @endauth
         </div>
     </body>
 </html>
