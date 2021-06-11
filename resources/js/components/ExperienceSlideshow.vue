@@ -3,7 +3,7 @@
 	    <a name="experience"></a>
 	    <div class="w-1/2 h-96">
 	    </div>
-	    <img src="{{ asset('/images/default.jpg') }}" alt="test" class="w-1/2 h-96">
+	    <img src="" alt="test" class="w-1/2 h-96">
 	</div>
 </template>
 
