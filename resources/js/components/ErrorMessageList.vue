@@ -16,7 +16,7 @@
 </style>
 
 <script type="text/javascript">
-	import ErrorMessage from 'ErrorMessage';
+	import ErrorMessage from './ErrorMessage';
 
 	export default {
 		name: 'ErrorMessageList',
