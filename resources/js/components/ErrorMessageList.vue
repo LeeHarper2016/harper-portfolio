@@ -7,12 +7,6 @@
 </template>
 
 <style scoped>
-.fade-enter-active, .fade-leave-active {
-	transition: opacity 0.65s ease;
-}
-.fade-enter, .fade-leave-to {
-	opacity: 0;
-}
 </style>
 
 <script type="text/javascript">
