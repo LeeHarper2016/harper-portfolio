@@ -13,7 +13,7 @@ class PositionRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return !is_null(auth()->user());
     }
 
     /**
