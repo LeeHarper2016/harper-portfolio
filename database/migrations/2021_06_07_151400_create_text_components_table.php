@@ -19,6 +19,7 @@ class CreateTextComponentsTable extends Migration
             $table->string('title');
             $table->longtext('body');
             $table->string('img_src');
+            $table->string('img_alt');
             $table->timestamps();
         });
     }

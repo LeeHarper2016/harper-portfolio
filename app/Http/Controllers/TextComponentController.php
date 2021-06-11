@@ -7,7 +7,7 @@ use App\Models\TextComponent;
 
 class TextComponentController extends Controller
 {
-    /*********************************************************************************************************************************************************************
+    /******************************************************************************************************************************************************
      * 
      * Function Name: TextComponentController.store().
      * Purpose: Using the validated information from $request, a new component will be created and stored to the database.
@@ -17,7 +17,7 @@ class TextComponentController extends Controller
      * @param TextComponentRequest $request The validated information that has been supplied by the user.
      * @returns Redirection back to the homepage.
      * 
-     ********************************************************************************************************************************************************************/
+     *****************************************************************************************************************************************************/
     public function store(TextComponentRequest $request) {
         $component = new TextComponent;
         $componentImage = $request->image;
@@ -26,7 +26,8 @@ class TextComponentController extends Controller
             "anchor" => $request->anchor,
             "title" => $request->title,
             "body" => $request->body,
-            "img_src" => $componentImage->hashName()
+            "img_src" => $componentImage->hashName(),
+            "img_alt" => $request->img_alt
         ]);
 
         $componentImage->store('/images/uploaded');

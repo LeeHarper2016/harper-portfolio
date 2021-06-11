@@ -13,6 +13,8 @@ class TextComponent extends Model
         'anchor',
         'title',
         'body',
-        'img_src'
+        'img_src',
+
+        'img_alt'
     ];
 }
