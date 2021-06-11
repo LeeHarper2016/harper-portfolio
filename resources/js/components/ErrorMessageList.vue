@@ -1,14 +1,8 @@
 <template>
 	<div class="absolute top-5 left-0 w-full h-24 space-y-5">
-	    <div class="w-3/4 bg-red-400 rounded-lg p-3 ml-auto mr-auto">
-	        Error 1
-	    </div>
-	    <div class="w-3/4 bg-red-400 rounded-lg p-3 ml-auto mr-auto">
-	        Error 2
-	    </div>
-	    <div class="w-3/4 bg-red-400 rounded-lg p-3 ml-auto mr-auto">
-	        Error 3
-	    </div>
+		<ErrorMessage v-for="error of errorList" :error='error'>
+			
+		</ErrorMessage>
 	</div>
 </template>
 
@@ -22,9 +16,14 @@
 </style>
 
 <script type="text/javascript">
+	import ErrorMessage from 'ErrorMessage';
+
 	export default {
 		name: 'ErrorMessageList',
 		props: ['errors'],
+		components: {
+			ErrorMessage
+		},
 		data() {
 			return {
 				errorList: null
