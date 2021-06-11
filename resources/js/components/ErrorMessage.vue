@@ -1,6 +1,6 @@
 <template>
     <div class="w-3/4 bg-red-400 rounded-lg p-3 ml-auto mr-auto">
-        {{ error.message }}
+        {{ error }}
     </div>
 </template>
 
