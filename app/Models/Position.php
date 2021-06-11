@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Position extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+            'company_name',
+            'position',
+            'body',
+            'description',
+            'image',
+            'img_alt'
+    ];
 }
