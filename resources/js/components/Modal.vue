@@ -43,7 +43,13 @@
 		},
 		methods: {
 			toggleVisibility() {
-				this.visible = !this.visible
+				this.visible = !this.visible;
+
+				if (this.visible) {
+					this.$emit('open');
+				} else {
+					this.$emit('close');
+				}
 			}
 		}
 	};
