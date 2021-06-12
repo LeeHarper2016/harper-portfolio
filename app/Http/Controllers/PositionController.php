@@ -35,4 +35,18 @@ class PositionController extends Controller
 
         return back();
     }
+
+    /******************************************************************************************************************************************************
+     * 
+     * Function Name: PositionController.viewJson().
+     * Purpose: Retrieves a json object containing all the Positions stored within the database.
+     * Precondition: N/A.
+     * Postcondition: N/A.
+     * 
+     * @returns json JSON object containing all Positions inside the database.
+     * 
+     * ***************************************************************************************************************************************************/
+    public function viewJson() {
+        return json_encode(Position::all());
+    }
 }
