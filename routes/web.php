@@ -25,3 +25,7 @@ Route::post('/login', [AuthController::class, 'logInUser']);
 Route::post('/component/text', [TextComponentController::class, 'store']);
 
 Route::post('/positions', [PositionController::class, 'store']);
+
+
+
+Route::get('/api/positions', [PositionController::class, 'viewJson']);
