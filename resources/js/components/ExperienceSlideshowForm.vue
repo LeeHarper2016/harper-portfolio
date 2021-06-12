@@ -82,7 +82,7 @@
 	import Modal from './Modal';
 
 	export default {
-		name: 'ExperienceSlideshow',
+		name: 'ExperienceSlideshowForm',
 		components: {
 			Modal
 		},
