@@ -56,9 +56,64 @@
 	    	 :alt="positions[0].img_alt" 
 	    	 class="w-1/2 h-96">
 	</div>
+	<div v-else
+		 class="bg-purple-200 border-t-2 border-b-2 border-purple-800"
+		 ref="positionSlideshow">
+	    <a name="experience"></a>
+	    <transition-group name="fade">
+	    	<div v-for="(position, index) of positions"
+	    		 v-if="index === currentIndex"
+			     :key="position._id"
+			     class="relative">
+			    <div class="flex absolute"
+	    		 	 ref="position">
+				    <div class="w-1/2 h-96 p-5 space-y-3">
+				    	<h2 class="font-bold text-2xl"
+				    		v-text="position.company_name"></h2>
+				    	<span class="italic"
+				    		  v-text="position.position"></span>
+				    	<p v-text="position.description">
+				    	</p>
+				    	<div class="flex w-full justify-around">
+			    		    <Modal class="inline" 
+						    	   button_classes="bg-purple-400 rounded-lg p-3 border border-purple-800"
+								   @open="toggleInterval"
+								   @close="toggleInterval">
+						        <template #button_text>
+						        	More Info
+						        </template>
+						        <template #header>
+						        	{{ position.company_name }}
+						        </template>
+						        <template #content>
+								    <img :src="position.img_src"
+								    	 :alt="position.img_alt" 
+								    	 class="w-1/2 h-56 ml-auto mr-auto mb-5 rounded-lg border border-purple-800">
+						        	{{ position.body }}
+						        </template>
+						    </Modal>
+					    	<ExperienceSlideshowForm></ExperienceSlideshowForm>
+					    	<button class="bg-red-400 rounded-lg p-3 border border-purple-800">
+					    		Delete Position
+					    	</button>
+				    	</div>
+				    </div>
+				    <img :src="position.img_src"
+				    	 :alt="position.img_alt" 
+				    	 class="w-1/2 h-96">
+		    	</div>
+			</div>
+		</transition-group>
+	</div>
 </template>
 
 <style scoped>
+.fade-enter-active, .fade-leave-active {
+	transition: opacity 0.65s ease;
+}
+.fade-enter, .fade-leave-to {
+	opacity: 0;
+}
 </style>
 
 <script type="text/javascript">
@@ -73,7 +128,11 @@
 		},
 		data() {
 			return {
+				currentIndex: 0,
+				indexTimer: null,
+				heightTimer: null,
 				positions: [{
+					_id: '',
 					company_name: '',
 					position: '',
 					body: '',
@@ -83,10 +142,38 @@
 				}]
 			}
 		},
+		methods: {
+			adjustSlideshowHeight() {
+				if (this.$refs['positionSlideshow']) {
+					this.$refs['positionSlideshow'].style.height = this.$refs['position'][0].clientHeight + "px";
+				}
+			},
+			changeIndex() {
+				if (this.currentIndex === (this.positions.length - 1)) {
+					this.currentIndex = 0;
+				} else {
+					this.currentIndex++;
+				}
+			},
+			toggleInterval() {
+				if (this.indexTimer === null) {
+					this.indexTimer = setInterval(this.changeIndex, 5000);
+				} else {
+					clearInterval(this.indexTimer);
+					this.indexTimer = null;
+				}
+			}
+		},
 		async mounted() {
 			let res = await axios.get('/api/positions');
 
 			this.positions = res.data;
+
+			if (this.positions.length > 1) {
+				this.heightTimer = setInterval(this.adjustSlideshowHeight, 1000);
+
+				this.toggleInterval();
+			}
 		}
 	};
 </script>
