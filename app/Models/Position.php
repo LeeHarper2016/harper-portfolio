@@ -14,7 +14,7 @@ class Position extends Model
             'position',
             'body',
             'description',
-            'image',
+            'img_src',
             'img_alt'
     ];
 }
