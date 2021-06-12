@@ -97,51 +97,53 @@
                 <experience-slideshow></experience-slideshow>
                 <div class="p-8">
                     <a name="education"></a>
-                    <h2 class="inline-block font-bold text-3xl mb-3 mr-5">{{ $sections[1]->title ?? 'Education' }}</h2>
-                    <modal class="inline" button_classes="p-1.5 bg-red-400 rounded-lg border-purple-800 text-center">
-                        <template #button_text>
-                            Edit Section
-                        </template>
-                        <template #header>
-                            Edit Section
-                        </template>
-                        <template #content>
-                            <form action="/component/text" method="POST" class="flex flex-col items-center space-y-6 font-normal" enctype="multipart/form-data">
-                                @csrf
-                                <input type="hidden" name="name" id="name" value="about" class="border rounded-md block">
-                                <label for="title">
-                                    Section Title:
-                                    <input type="text" name="title" id="title" class="border rounded-md block">
-                                </label>
-                                <label for="body">
-                                    Section Body:
-                                    <textarea cols="50" rows="5" id="body" name="body" class="border rounded-md block">
-                                        
-                                    </textarea>
-                                </label>
-                                <label for="image">
-                                    Section Image:
-                                    <input type="file" name="image" id="image" class="border rounded-md block">
-                                </label>
-                                <label for="img_alt">
-                                    Image Description:
-                                    <textarea cols="50" rows="5" id="img_alt" name="img_alt" class="border rounded-md block">
-                                        
-                                    </textarea>
-                                </label>
-                                <button type="submit" class="border border-purple-800 rounded-lg p-3 bg-purple-300">
-                                    Submit
-                                </button>
-                            </form>
-                        </template>
-                    </modal>
-                    <hr class="border-purple-800 w-1/4">
                     <div class="flex justify-between">
-                        <p class="w-2/3">
-                            {{ $sections[1]->body ?? 'This is the default text for a section.' }}
-                        </p>
                         <img src="{{ isset($sections[1]->img_src) ? asset($sections[1]->img_src) : asset('/images/default.jpg') }}"
                          alt="{{ $sections[1]->img_alt ?? '' }}" class="w-56 h-72 block ml-auto mr-auto rounded-lg border-purple-800 border-4">
+                         <div class="w-2/3">
+                            <h2 class="inline-block font-bold text-3xl mb-3 mr-5">{{ $sections[1]->title ?? 'Education' }}</h2>
+                            <modal class="inline" button_classes="p-1.5 bg-red-400 rounded-lg border-purple-800 text-center">
+                                <template #button_text>
+                                    Edit Section
+                                </template>
+                                <template #header>
+                                    Edit Section
+                                </template>
+                                <template #content>
+                                    <form action="/component/text" method="POST" class="flex flex-col items-center space-y-6 font-normal" enctype="multipart/form-data">
+                                        @csrf
+                                        <input type="hidden" name="name" id="name" value="about" class="border rounded-md block">
+                                        <label for="title">
+                                            Section Title:
+                                            <input type="text" name="title" id="title" class="border rounded-md block">
+                                        </label>
+                                        <label for="body">
+                                            Section Body:
+                                            <textarea cols="50" rows="5" id="body" name="body" class="border rounded-md block">
+                                                
+                                            </textarea>
+                                        </label>
+                                        <label for="image">
+                                            Section Image:
+                                            <input type="file" name="image" id="image" class="border rounded-md block">
+                                        </label>
+                                        <label for="img_alt">
+                                            Image Description:
+                                            <textarea cols="50" rows="5" id="img_alt" name="img_alt" class="border rounded-md block">
+                                                
+                                            </textarea>
+                                        </label>
+                                        <button type="submit" class="border border-purple-800 rounded-lg p-3 bg-purple-300">
+                                            Submit
+                                        </button>
+                                    </form>
+                                </template>
+                            </modal>
+                            <hr class="border-purple-800 w-1/4">
+                            <p>
+                                {{ $sections[1]->body ?? 'This is the default text for a section.' }}
+                            </p>
+                         </div>
                     </div>
                 </div>
             </main>
