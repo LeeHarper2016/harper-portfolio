@@ -23,6 +23,6 @@ class text_section extends Component
      */
     public function render()
     {
-        return view('components.text_section');
+        return view('components.text-section');
     }
 }
