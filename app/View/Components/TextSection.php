@@ -4,16 +4,20 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class text_section extends Component
+class TextSection extends Component
 {
+    public $section;
+    public $anchor;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($section, $anchor)
     {
-        //
+        $this->section = $section;
+        $this->anchor = $anchor;
     }
 
     /**
