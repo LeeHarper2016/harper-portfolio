@@ -6,14 +6,16 @@ use Illuminate\View\Component;
 
 class EditSectionForm extends Component
 {
+    public $anchor;
+    
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($anchor)
     {
-        //
+        $this->anchor = $anchor;
     }
 
     /**
