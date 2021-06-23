@@ -1,6 +1,6 @@
 <form action="/component/text" method="POST" class="flex flex-col items-center space-y-6 font-normal" enctype="multipart/form-data">
     @csrf
-    <input type="hidden" name="name" id="name" value="about" class="border rounded-md block">
+    <input type="hidden" name="name" id="name" value="{{ $anchor ?? null }}" class="border rounded-md block">
     <label for="title">
         Section Title:
         <input type="text" name="title" id="title" class="border rounded-md block">
