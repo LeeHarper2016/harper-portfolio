@@ -45,53 +45,9 @@
                 </nav>
             </header>
             <main class="w-full bg-white border-t-4 border-purple-600">
-                <div class="p-8">
-                    <a name="about"></a>
-                    <h2 class="inline-block font-bold text-3xl mb-3 mr-5">{{ $sections[0]->title ?? 'About Me' }}</h2>
-                    <modal class="inline" button_classes="p-1.5 bg-red-400 rounded-lg border-purple-800 text-center">
-                        <template #button_text>
-                            Edit Section
-                        </template>
-                        <template #header>
-                            Edit Section
-                        </template>
-                        <template #content>
-                            <x-edit-section-form /> 
-                        </template>
-                    </modal>
-                    <hr class="border-purple-800 w-1/4">
-                    <div class="flex justify-between">
-                        <p class="w-2/3">
-                            {{ $sections[0]->body ?? 'This is the default text for a section.' }}
-                        </p>
-                        <img src="{{ isset($sections[0]->img_src) ? asset($sections[0]->img_src) : asset('/images/default.jpg') }}"
-                         alt="{{ $sections[0]->img_alt ?? '' }}" class="w-56 h-72 block ml-auto mr-auto rounded-lg border-purple-800 border-4">
-                    </div>
-                </div>
+                <x-text-section section="{{ $sections[0] ?? null }}" anchor="about" />
                 <experience-slideshow></experience-slideshow>
-                <div class="p-8">
-                    <a name="education"></a>
-                    <h2 class="inline-block font-bold text-3xl mb-3 mr-5">{{ $sections[1]->title ?? 'Education' }}</h2>
-                    <modal class="inline" button_classes="p-1.5 bg-red-400 rounded-lg border-purple-800 text-center">
-                        <template #button_text>
-                            Edit Section
-                        </template>
-                        <template #header>
-                            Edit Section
-                        </template>
-                        <template #content>
-                            <x-edit-section-form /> 
-                        </template>
-                    </modal>
-                    <hr class="border-purple-800 w-1/4">
-                    <div class="flex justify-between">
-                        <p class="w-2/3">
-                            {{ $sections[1]->body ?? 'This is the default text for a section.' }}
-                        </p>
-                        <img src="{{ isset($sections[1]->img_src) ? asset($sections[1]->img_src) : asset('/images/default.jpg') }}"
-                         alt="{{ $sections[1]->img_alt ?? '' }}" class="w-56 h-72 block ml-auto mr-auto rounded-lg border-purple-800 border-4">
-                    </div>
-                </div>
+                <x-text-section section="{{ $sections[1] ?? null }}" anchor="education" />
             </main>
         </div>
     </body>
