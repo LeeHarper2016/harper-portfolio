@@ -9,7 +9,7 @@
             Edit Section
         </template>
         <template #content>
-            <x-edit-section-form /> 
+            <x-edit-section-form anchor="{{ $anchor }}" /> 
         </template>
     </modal>
     <hr class="border-purple-800 w-1/4">
