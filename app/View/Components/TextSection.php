@@ -7,17 +7,15 @@ use Illuminate\View\Component;
 class TextSection extends Component
 {
     public $section;
-    public $anchor;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($section, $anchor)
+    public function __construct($section)
     {
         $this->section = $section;
-        $this->anchor = $anchor;
     }
 
     /**
