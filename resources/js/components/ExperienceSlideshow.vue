@@ -21,7 +21,7 @@
     	</div>
 	</div>
 	<div v-else-if="positions.length === 1"
-		 class="flex w-full bg-purple-200 border-t-2 border-b-2 border-purple-800">
+		 class="flex w-full bg-purple-200 border-t-2 border-b-2 border-purple-800 box-content">
 	    <a name="experience"></a>
 	    <div class="w-1/2 h-96 p-5 space-y-3">
 	    	<h2 class="font-bold text-2xl"
@@ -52,57 +52,57 @@
 		    	</button>
 	    	</div>
 	    </div>
-	    <img :src="positions[0].img_src"
-	    	 :alt="positions[0].img_alt" 
-	    	 class="w-1/2 h-96">
+	    <div class="w-1/2">
+		    <img :src="positions[0].img_src"
+		    	 :alt="positions[0].img_alt" 
+		    	 class="w-full">
+	    </div>
 	</div>
 	<div v-else
 		 class="bg-purple-200 border-t-2 border-b-2 border-purple-800"
 		 ref="positionSlideshow">
 	    <a name="experience"></a>
-	    <transition-group name="fade">
-	    	<div v-for="(position, index) of positions"
+    	<transition-group name="fade"
+    					  class="grid grid-cols-1">
+    		<div class="flex row-start-1 col-start-1"
+    			 v-for="(position, index) of positions"
 	    		 v-if="index === currentIndex"
-			     :key="position._id"
-			     class="relative">
-			    <div class="flex absolute"
-	    		 	 ref="position">
-				    <div class="w-1/2 h-96 p-5 space-y-3">
-				    	<h2 class="font-bold text-2xl"
-				    		v-text="position.company_name"></h2>
-				    	<span class="italic"
-				    		  v-text="position.position"></span>
-				    	<p v-text="position.description">
-				    	</p>
-				    	<div class="flex w-full justify-around">
-			    		    <Modal class="inline" 
-						    	   button_classes="bg-purple-400 rounded-lg p-3 border border-purple-800"
-								   @open="toggleInterval"
-								   @close="toggleInterval">
-						        <template #button_text>
-						        	More Info
-						        </template>
-						        <template #header>
-						        	{{ position.company_name }}
-						        </template>
-						        <template #content>
-								    <img :src="position.img_src"
-								    	 :alt="position.img_alt" 
-								    	 class="w-1/2 h-56 ml-auto mr-auto mb-5 rounded-lg border border-purple-800">
-						        	{{ position.body }}
-						        </template>
-						    </Modal>
-					    	<ExperienceSlideshowForm></ExperienceSlideshowForm>
-					    	<button class="bg-red-400 rounded-lg p-3 border border-purple-800">
-					    		Delete Position
-					    	</button>
-				    	</div>
-				    </div>
-				    <img :src="position.img_src"
-				    	 :alt="position.img_alt" 
-				    	 class="w-1/2 h-96">
-		    	</div>
-			</div>
+			     :key="position._id">
+			    <div class="p-5 space-y-3 w-1/2">
+			    	<h2 class="font-bold text-2xl"
+			    		v-text="position.company_name"></h2>
+			    	<span class="italic"
+			    		  v-text="position.position"></span>
+			    	<p v-text="position.description">
+			    	</p>
+			    	<div class="flex w-full justify-around">
+		    		    <Modal class="inline" 
+					    	   button_classes="bg-purple-400 rounded-lg p-3 border border-purple-800"
+							   @open="toggleInterval"
+							   @close="toggleInterval">
+					        <template #button_text>
+					        	More Info
+					        </template>
+					        <template #header>
+					        	{{ position.company_name }}
+					        </template>
+					        <template #content>
+							    <img :src="position.img_src"
+							    	 :alt="position.img_alt" 
+							    	 class="w-1/2 h-56 ml-auto mr-auto mb-5 rounded-lg border border-purple-800">
+					        	{{ position.body }}
+					        </template>
+					    </Modal>
+				    	<ExperienceSlideshowForm></ExperienceSlideshowForm>
+				    	<button class="bg-red-400 rounded-lg p-3 border border-purple-800">
+				    		Delete Position
+				    	</button>
+			    	</div>
+			    </div>
+			    <img :src="position.img_src"
+			    	 :alt="position.img_alt"
+			    	 class="w-1/2 h-96">
+	    	</div>
 		</transition-group>
 	</div>
 </template>
@@ -130,7 +130,6 @@
 			return {
 				currentIndex: 0,
 				indexTimer: null,
-				heightTimer: null,
 				positions: [{
 					_id: '',
 					company_name: '',
@@ -143,11 +142,6 @@
 			}
 		},
 		methods: {
-			adjustSlideshowHeight() {
-				if (this.$refs['positionSlideshow']) {
-					this.$refs['positionSlideshow'].style.height = this.$refs['position'][0].clientHeight + "px";
-				}
-			},
 			changeIndex() {
 				if (this.currentIndex === (this.positions.length - 1)) {
 					this.currentIndex = 0;
@@ -157,7 +151,7 @@
 			},
 			toggleInterval() {
 				if (this.indexTimer === null) {
-					this.indexTimer = setInterval(this.changeIndex, 5000);
+					this.indexTimer = setInterval(this.changeIndex, 7500);
 				} else {
 					clearInterval(this.indexTimer);
 					this.indexTimer = null;
@@ -170,8 +164,6 @@
 			this.positions = res.data;
 
 			if (this.positions.length > 1) {
-				this.heightTimer = setInterval(this.adjustSlideshowHeight, 1000);
-
 				this.toggleInterval();
 			}
 		}
