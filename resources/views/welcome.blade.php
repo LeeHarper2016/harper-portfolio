@@ -45,9 +45,15 @@
                 </nav>
             </header>
             <main class="w-full bg-white border-t-4 border-purple-600">
-                <x-text-section section="{{ $sections[0] ?? null }}" anchor="about" />
+                @if (sizeof($sections) === 1)
+                    @component('components.text-section', ['section' => $sections[0]])
+                    @endcomponent
+                @endif
                 <experience-slideshow></experience-slideshow>
-                <x-text-section section="{{ $sections[1] ?? null }}" anchor="education" />
+                @if (sizeof($sections) === 2)
+                    @component('components.text-section', ['section' => $sections[1]])
+                    @endcomponent
+                @endif
             </main>
         </div>
     </body>
