@@ -33,54 +33,20 @@
 
 <script type="text/javascript">
 	import Modal from './Modal';
-	import ExperienceSlideshowForm from './ExperienceSlideshowForm'
 
 	export default {
-		name: 'ExperienceSlideshow',
+		name: 'SkillsetShowcase',
 		components: {
-			ExperienceSlideshowForm,
 			Modal
 		},
 		data() {
 			return {
-				currentIndex: 0,
-				indexTimer: null,
-				positions: [{
-					_id: '',
-					company_name: '',
-					position: '',
-					body: '',
-					description: '',
-					img_src: '',
-					img_alt: ''
-				}]
+				skills: []
 			}
 		},
 		methods: {
-			changeIndex() {
-				if (this.currentIndex === (this.positions.length - 1)) {
-					this.currentIndex = 0;
-				} else {
-					this.currentIndex++;
-				}
-			},
-			toggleInterval() {
-				if (this.indexTimer === null) {
-					this.indexTimer = setInterval(this.changeIndex, 7500);
-				} else {
-					clearInterval(this.indexTimer);
-					this.indexTimer = null;
-				}
-			}
 		},
 		async mounted() {
-			let res = await axios.get('/api/positions');
-
-			this.positions = res.data;
-
-			if (this.positions.length > 1) {
-				this.toggleInterval();
-			}
 		}
 	};
 </script>
