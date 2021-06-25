@@ -48,11 +48,39 @@
                 @if (sizeof($sections) === 1)
                     @component('components.text-section', ['section' => $sections[0]])
                     @endcomponent
+                @else
+                    <div class="p-5 w-full">
+                        <modal class="inline" button_classes="block p-1.5 bg-purple-200 rounded-lg border border-purple-800 text-center ml-auto mr-auto">
+                            <template #button_text>
+                                Add About Section
+                            </template>
+                            <template #header>
+                                Add "About" Section
+                            </template>
+                            <template #content>
+                                <x-edit-section-form anchor="about" /> 
+                            </template>
+                        </modal>
+                    </div>
                 @endif
                 <experience-slideshow></experience-slideshow>
                 @if (sizeof($sections) === 2)
                     @component('components.text-section', ['section' => $sections[1]])
                     @endcomponent
+                @else
+                    <div class="p-5 w-full">
+                        <modal class="inline" button_classes="block p-1.5 bg-purple-200 rounded-lg border border-purple-800 text-center ml-auto mr-auto">
+                            <template #button_text>
+                                Add Education Section
+                            </template>
+                            <template #header>
+                                Add "Education" Section
+                            </template>
+                            <template #content>
+                                <x-edit-section-form anchor="education" /> 
+                            </template>
+                        </modal>
+                    </div>
                 @endif
             </main>
         </div>
