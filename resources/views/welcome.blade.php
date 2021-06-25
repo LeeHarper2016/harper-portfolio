@@ -82,6 +82,7 @@
                         </modal>
                     </div>
                 @endif
+                <skillset-showcase></skillset-showcase>
             </main>
         </div>
     </body>
