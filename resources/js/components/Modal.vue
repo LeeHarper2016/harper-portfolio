@@ -11,6 +11,10 @@
 					 @click="toggleVisibility">
 				</div>
 				<div class="row-start-1 col-start-1 rounded-lg bg-white p-10 m-24">
+					<div class="float-right text-xl font-semibold cursor-pointer"
+					 	 @click="toggleVisibility">
+						X
+					</div>
 					<h2 class="text-center font-bold text-4xl">
 						<slot name="header"></slot>
 					</h2>
