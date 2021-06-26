@@ -56,8 +56,10 @@
 			}
 		},
 		methods: {
-			submitSkill() {
-				axios.post('/skills', new FormData(this.$refs['skill_form']));
+			async submitSkill() {
+				var res = await axios.post('/skills', new FormData(this.$refs['skill_form']));
+
+				this.$emit('skillAdded', res.data);
 			}
 		}
 	};
