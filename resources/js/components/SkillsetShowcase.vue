@@ -17,6 +17,20 @@
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
+        <div class="flex justify-center p-5">
+		    <Modal class="inline" 
+		    	   button_classes="bg-purple-200 rounded-lg p-3 border border-purple-800">
+		        <template #button_text>
+		            Add Skill
+		        </template>
+		        <template #header>
+		        	Add A Skill
+		        </template>
+		        <template #content>
+		        	<SkillsetShowcaseForm></SkillsetShowcaseForm>
+		        </template>
+		    </Modal>
+        </div>
         <div class="flex flex-wrap justify-center w-2/3 mr-auto ml-auto">
         </div>
     </div>
@@ -33,11 +47,13 @@
 
 <script type="text/javascript">
 	import Modal from './Modal';
+	import SkillsetShowcaseForm from './SkillsetShowcaseForm';
 
 	export default {
 		name: 'SkillsetShowcase',
 		components: {
-			Modal
+			Modal,
+			SkillsetShowcaseForm
 		},
 		data() {
 			return {
