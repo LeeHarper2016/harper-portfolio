@@ -5,11 +5,12 @@
 				<slot name="button_text"></slot>
 		</button>
 		<transition name="fade">
-			<div v-if="visible" 
-				 class="w-screen h-screen fixed bg-gray-600 bg-opacity-75 top-0 left-0 z-10 p-24"
-				 @click="toggleVisibility">
-				<div class="rounded-lg bg-white w-full h-full p-10"
-					 @click.stop>
+			<div v-if="visible"
+				 class="grid grid-cols-1 fixed z-10 top-0 left-0">
+				<div class="row-start-1 col-start-1 w-screen h-screen bg-gray-600 bg-opacity-75"
+					 @click="toggleVisibility">
+				</div>
+				<div class="row-start-1 col-start-1 rounded-lg bg-white p-10 m-24">
 					<h2 class="text-center font-bold text-4xl">
 						<slot name="header"></slot>
 					</h2>
