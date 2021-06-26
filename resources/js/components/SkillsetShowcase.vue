@@ -32,6 +32,15 @@
 		    </Modal>
         </div>
         <div class="flex flex-wrap justify-center w-2/3 mr-auto ml-auto">
+        	<div v-for="skill of skills"
+        		 :key="skill.id"
+        		 class="text-center m-5">
+        		<img :src="skill.img_src"
+        		 	 :alt="skill.img_alt"
+        		 	 class="">
+        		<span v-text="skill.name"
+        			  class="w-full text-xl font-bold"></span>
+    		</div>
         </div>
     </div>
 </template>
@@ -63,6 +72,9 @@
 		methods: {
 		},
 		async mounted() {
+			var res = await axios.get('/api/skills');
+
+			this.skills = res.data;
 		}
 	};
 </script>
