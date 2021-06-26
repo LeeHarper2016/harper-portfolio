@@ -57,8 +57,7 @@
 		},
 		methods: {
 			submitSkill() {
-				axios.post('/skills', new FormData(this.$refs['skill_form']))
-					.then(res => console.log(res));
+				axios.post('/skills', new FormData(this.$refs['skill_form']));
 			}
 		}
 	};
