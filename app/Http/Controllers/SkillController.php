@@ -29,4 +29,21 @@ class SkillController extends Controller
 
         return json_encode($skill);
     }
+
+    /****************************************************************************************************
+     * 
+     * Function: SkillController.viewJson().
+     * Purpose: Retrieves a collection of all skills within the database, then returns it to the user as
+     *          a JSON array.
+     * Precondition: N/A.
+     * Postcondition: N/A.
+     * 
+     * @returns json The JSON object that contains information on all skills within the database.
+     * 
+    ****************************************************************************************************/
+    public function viewJson() {
+        $skills = Skill::all();
+
+        return json_encode($skills);
+    }
 }
