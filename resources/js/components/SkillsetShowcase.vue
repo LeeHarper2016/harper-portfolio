@@ -27,7 +27,7 @@
 		        	Add A Skill
 		        </template>
 		        <template #content>
-		        	<SkillsetShowcaseForm></SkillsetShowcaseForm>
+		        	<SkillsetShowcaseForm @skillAdded="addSkill($event)"></SkillsetShowcaseForm>
 		        </template>
 		    </Modal>
         </div>
@@ -70,6 +70,9 @@
 			}
 		},
 		methods: {
+			addSkill(skill) {
+				this.skills.push(skill);
+			}
 		},
 		async mounted() {
 			var res = await axios.get('/api/skills');
