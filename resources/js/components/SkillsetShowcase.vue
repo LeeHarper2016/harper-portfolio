@@ -1,5 +1,6 @@
 <template>
     <div class="p-8 w-full">
+    	<a name="skills"></a>
         <h2 class="inline-block font-bold text-3xl mb-3 mr-5">My Skillset</h2>
         <hr class="border-purple-800 w-1/4">
         <p>
