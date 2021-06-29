@@ -22,7 +22,6 @@
 	</div>
 	<div v-else-if="positions.length === 1"
 		 class="flex w-full bg-purple-200 border-t-2 border-b-2 border-purple-800 box-content">
-	    <a name="experience"></a>
 	    <div class="w-1/2 h-96 p-5 space-y-3">
 	    	<h2 class="font-bold text-2xl"
 	    		v-text="positions[0].company_name"></h2>
@@ -61,7 +60,6 @@
 	<div v-else
 		 class="bg-purple-200 border-t-2 border-b-2 border-purple-800"
 		 ref="positionSlideshow">
-	    <a name="experience"></a>
     	<transition-group name="fade"
     					  class="grid grid-cols-1">
     		<div class="flex row-start-1 col-start-1"
