@@ -46,7 +46,7 @@
                 </nav>
             </header>
             <main class="w-full bg-white border-t-4 border-purple-600">
-                @if (sizeof($sections) === 1)
+                @if (sizeof($sections) >= 1)
                     <a name="about"></a>
                     @component('components.text-section', ['section' => $sections[0]])
                     @endcomponent
@@ -66,7 +66,7 @@
                     </div>
                 @endif
                 <experience-slideshow></experience-slideshow>
-                @if (sizeof($sections) === 2)
+                @if (sizeof($sections) >= 2)
                     <a name="education"></a>
                     @component('components.text-section', ['section' => $sections[1]])
                     @endcomponent
