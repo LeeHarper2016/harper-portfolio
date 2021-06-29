@@ -89,7 +89,7 @@
                 <skillset-showcase></skillset-showcase>
                 <div class="p-8 w-full">
                     <a name="contact"></a>
-                    <h2 class="font-bold text-2xl text-center">Contact Us</h2>
+                    <h2 class="font-bold text-3xl text-center">Contact Us</h2>
                     <form class="flex flex-col items-center mt-5 space-y-5" method="POST" action="/contact">
                         <div class="flex flex-row justify-between w-1/3">
                             <label for="name" class="flex flex-col">
