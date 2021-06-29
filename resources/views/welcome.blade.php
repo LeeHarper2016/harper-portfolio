@@ -27,6 +27,9 @@
                 <nav class="flex justify-around p-5 font-bold">
                     <a href="#about" class="hover:text-gray-800 text-xl duration-300">About</a>
                     <a href="#experience" class="hover:text-gray-800 text-xl duration-300">Experience</a>
+                    <a href="#education" class="hover:text-gray-800 text-xl duration-300">Education</a>
+                    <a href="#skills" class="hover:text-gray-800 text-xl duration-300">Skills</a>
+                    <a href="#contact" class="hover:text-gray-800 text-xl duration-300">Contact</a>
                     @guest
                     <modal class="inline" button_classes="hover:text-gray-800 text-xl font-bold duration-300">
                         <template #button_text>
@@ -40,12 +43,11 @@
                         </template>
                     </modal>
                     @endguest
-                    <a href="#education" class="hover:text-gray-800 text-xl duration-300">Education</a>
-                    <a href="#contact" class="hover:text-gray-800 text-xl duration-300">Contact</a>
                 </nav>
             </header>
             <main class="w-full bg-white border-t-4 border-purple-600">
                 @if (sizeof($sections) === 1)
+                    <a name="about"></a>
                     @component('components.text-section', ['section' => $sections[0]])
                     @endcomponent
                 @else
@@ -65,6 +67,7 @@
                 @endif
                 <experience-slideshow></experience-slideshow>
                 @if (sizeof($sections) === 2)
+                    <a name="education"></a>
                     @component('components.text-section', ['section' => $sections[1]])
                     @endcomponent
                 @else
@@ -82,6 +85,7 @@
                         </modal>
                     </div>
                 @endif
+                <a name="skills"></a>
                 <skillset-showcase></skillset-showcase>
                 <div class="p-8 w-full">
                     <a name="contact"></a>
