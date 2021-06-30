@@ -20,7 +20,7 @@ class AuthController extends Controller
      * 
      ****************************************************************************************************/
     public function logInUser(LoginRequest $request) {
-        if(Auth::attempt($credentials)) {
+        if(Auth::attempt(['name' => $request->name, 'password' => $request->password])) {
             $request->session()->regenerate();
 
             return back();
