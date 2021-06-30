@@ -14,9 +14,9 @@
                 </template>
             </modal>
             <hr class="border-purple-800 w-full md:w-1/4">
-            <p class="w-full md:w-2/3">
-                {{ $section->body ?? 'This is the default text for a section.' }}
-            </p>
+            <div class="w-full defaultCSS">
+                {!! $section->body ?? 'This is the default text for a section.' !!}
+            </div>
         </div>
         <img src="{{ isset($section->img_src) ? asset($section->img_src) : asset('/images/default.jpg') }}"
          alt="{{ $section->img_alt ?? '' }}" class="w-72 h-72 block ml-auto mr-auto rounded-lg border-purple-800 border-4">
