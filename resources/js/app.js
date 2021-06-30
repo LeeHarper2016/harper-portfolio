@@ -9,6 +9,7 @@ import ErrorMessageList from './components/ErrorMessageList';
 import ExperienceSlideshow from './components/ExperienceSlideshow';
 import Modal from './components/Modal';
 import SkillsetShowcase from './components/SkillsetShowcase';
+import TrixModified from './TrixModified';
 
 window.Vue = new Vue({
 	el: '#app',
@@ -17,6 +18,7 @@ window.Vue = new Vue({
 		ErrorMessageList,
 		ExperienceSlideshow,
 		Modal,
-		SkillsetShowcase
+		SkillsetShowcase,
+		TrixModified
 	}
 });
