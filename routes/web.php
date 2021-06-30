@@ -22,16 +22,16 @@ use App\Http\Controllers\TextComponentController;
 
 Route::get('/', [HomeController::class, 'view']);
 
-Route::post('/login', [AuthController::class, 'logInUser'])->middleware('throttle:login');
+Route::post('/login', [AuthController::class, 'logInUser'])->middleware(['throttle:login']);
 Route::get('/logout', [AuthController::class, 'logOutUser']);
 
-Route::post('/component/text', [TextComponentController::class, 'store']);
+Route::post('/component/text', [TextComponentController::class, 'store'])->middleware(['can:create,App\Models\TextComponent']);
 
-Route::post('/positions', [PositionController::class, 'store']);
+Route::post('/positions', [PositionController::class, 'store'])->middleware(['can:create,App\Models\Position']);
 
-Route::post('/skills', [SkillController::class, 'store']);
+Route::post('/skills', [SkillController::class, 'store'])->middleware(['can:create,App\Models\Skill']);;
 
 Route::post('/contact', [ContactController::class, 'sendMail'])->middleware('throttle:contact');
 
-Route::get('/api/positions', [PositionController::class, 'viewJson']);
-Route::get('/api/skills', [SkillController::class, 'viewJson']);
+Route::get('/api/positions', [PositionController::class, 'viewJson'])->middleware(['can:viewAny,App\Models\Position']);;
+Route::get('/api/skills', [SkillController::class, 'viewJson'])->middleware(['can:viewAny,App\Models\Skill']);;
