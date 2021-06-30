@@ -9,7 +9,7 @@ import ErrorMessageList from './components/ErrorMessageList';
 import ExperienceSlideshow from './components/ExperienceSlideshow';
 import Modal from './components/Modal';
 import SkillsetShowcase from './components/SkillsetShowcase';
-import TrixModified from './TrixModified';
+import TrixModified from './components/TrixModified';
 
 window.Vue = new Vue({
 	el: '#app',
