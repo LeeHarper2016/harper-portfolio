@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="defaultCSS">
         <input :id="this.inputId"
                type="hidden"
                :name="this.inputName"
