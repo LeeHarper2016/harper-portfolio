@@ -38,6 +38,10 @@
             		  class="rounded-md border p-1.5">
             </textarea>
         </label>
+        <button type="submit" 
+        		class="border border-purple-800 rounded-lg p-3 bg-purple-300">
+            Submit
+        </button>
     </form>
 </div>
 </template>
