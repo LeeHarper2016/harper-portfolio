@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PositionController;
 use App\Http\Controllers\SkillController;
@@ -28,6 +29,8 @@ Route::post('/component/text', [TextComponentController::class, 'store']);
 Route::post('/positions', [PositionController::class, 'store']);
 
 Route::post('/skills', [SkillController::class, 'store']);
+
+Route::post('/contact', [ContactController::class, 'sendMail']);
 
 Route::get('/api/positions', [PositionController::class, 'viewJson']);
 Route::get('/api/skills', [SkillController::class, 'viewJson']);
