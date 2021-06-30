@@ -43,6 +43,9 @@
                         </template>
                     </modal>
                     @endguest
+                    @auth
+                    <a href="/logout" class="hover:text-gray-800 text-xl duration-300">Log Out</a>
+                    @endauth
                 </nav>
             </header>
             <main class="w-full bg-white border-t-4 border-purple-600">
