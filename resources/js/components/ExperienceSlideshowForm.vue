@@ -20,32 +20,24 @@
                     <input type="text" 
                     	   name="company_name" 
                     	   id="company_name" 
-                    	   class="border rounded-md block">
+                    	   class="border rounded-md block p-1.5"
+                           placeholder="Company">
                 </label>
                 <label for="position">
                     Position:
                     <input type="text" 
                     	   name="position" 
                     	   id="position" 
-                    	   class="border rounded-md block">
+                    	   class="border rounded-md block p-1.5"
+                           placeholder="JavaScript Developer">
                 </label>
                 <label for="body">
                     Section Body:
-                    <textarea cols="50" 
-                    		  rows="5" 
-                    		  id="body" 
-                    		  name="body" 
-                    		  class="border rounded-md block">
-                        
-                    </textarea>
+                    <TrixModified inputId="body" inputName="body" placeholder="Enter a description of the position held."></TrixModified>
                 </label>
                 <label for="description">
                     Section Description:
-                    <textarea cols="50" 
-                    		  rows="5" 
-                    		  id="description" 
-                    		  name="description" 
-                    		  class="border rounded-md block">
+                    <TrixModified inputId="description" inputName="description" placeholder="Enter a summary of the position held."></TrixModified>
                         
                     </textarea>
                 </label>
@@ -54,7 +46,7 @@
                     <input type="file" 
                     	   name="image" 
                     	   id="image" 
-                    	   class="border rounded-md block">
+                    	   class="border rounded-md block p-1.5">
                 </label>
                 <label for="img_alt">
                     Image Description:
@@ -62,7 +54,8 @@
                     		  rows="5" 
                     		  id="img_alt" 
                     		  name="img_alt" 
-                    		  class="border rounded-md block">
+                    		  class="border rounded-md block p-1.5"
+                              placeholder="Short description of the image uploaded.">
                         
                     </textarea>
                 </label>
@@ -80,11 +73,13 @@
 
 <script type="text/javascript">
 	import Modal from './Modal';
+    import TrixModified from './TrixModified';
 
 	export default {
 		name: 'ExperienceSlideshowForm',
 		components: {
-			Modal
+			Modal,
+            TrixModified
 		},
 		computed: {
 			csrfToken() {
