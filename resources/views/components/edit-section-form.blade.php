@@ -6,7 +6,7 @@
         <input type="text" name="title" id="title" class="border rounded-md block p-1.5" placeholder="Section Name">
     </label>
     <label for="body">
-        <trix-modified inputId="body" inputName="body" placeholder="A summary of this section"></trix-modified>
+        <trix-modified input-id="body" input-name="body" placeholder="A summary of this section"></trix-modified>
     </label>
     <label for="image">
         Section Image:

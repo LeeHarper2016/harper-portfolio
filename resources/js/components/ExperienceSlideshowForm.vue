@@ -37,7 +37,7 @@
                 </label>
                 <label for="description">
                     Section Description:
-                    <TrixModified inputId="description" inputName="description" placeholder="Enter a summary of the position held."></TrixModified>
+                    <TrixModified input-id="description" input-name="description" placeholder="Enter a summary of the position held."></TrixModified>
                         
                     </textarea>
                 </label>
