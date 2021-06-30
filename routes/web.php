@@ -23,6 +23,7 @@ use App\Http\Controllers\TextComponentController;
 Route::get('/', [HomeController::class, 'view']);
 
 Route::post('/login', [AuthController::class, 'logInUser']);
+Route::get('/logout', [AuthController::class, 'logOutUser']);
 
 Route::post('/component/text', [TextComponentController::class, 'store']);
 
