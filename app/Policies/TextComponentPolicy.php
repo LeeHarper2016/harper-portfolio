@@ -13,24 +13,24 @@ class TextComponentPolicy
     /**
      * Determine whether the user can view any models.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\User  $user  | null
      * @return mixed
      */
-    public function viewAny(User $user)
+    public function viewAny(?User $user)
     {
-        //
+        return true;
     }
 
     /**
      * Determine whether the user can view the model.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\User  $user  | null
      * @param  \App\Models\TextComponent  $textComponent
      * @return mixed
      */
-    public function view(User $user, TextComponent $textComponent)
+    public function view(?User $user, TextComponent $textComponent)
     {
-        //
+        return true;
     }
 
     /**
@@ -41,7 +41,7 @@ class TextComponentPolicy
      */
     public function create(User $user)
     {
-        //
+        return !is_null($user);
     }
 
     /**
@@ -53,7 +53,7 @@ class TextComponentPolicy
      */
     public function update(User $user, TextComponent $textComponent)
     {
-        //
+        return !is_null($user);
     }
 
     /**
@@ -65,7 +65,7 @@ class TextComponentPolicy
      */
     public function delete(User $user, TextComponent $textComponent)
     {
-        //
+        return !is_null($user);
     }
 
     /**
@@ -77,7 +77,7 @@ class TextComponentPolicy
      */
     public function restore(User $user, TextComponent $textComponent)
     {
-        //
+        return !is_null($user);
     }
 
     /**
@@ -89,6 +89,6 @@ class TextComponentPolicy
      */
     public function forceDelete(User $user, TextComponent $textComponent)
     {
-        //
+        return !is_null($user);
     }
 }
