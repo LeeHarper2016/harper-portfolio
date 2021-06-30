@@ -6,11 +6,8 @@
 		</button>
 		<transition name="fade">
 			<div v-if="visible"
-				 class="grid grid-cols-1 fixed z-10 top-0 left-0">
-				<div class="row-start-1 col-start-1 w-screen h-screen bg-gray-600 bg-opacity-75"
-					 @click="toggleVisibility">
-				</div>
-				<div class="row-start-1 col-start-1 rounded-lg bg-white p-10 m-24">
+             	 class="bg-opacity-80 bg-gray-400 fixed top-0 left-0 w-screen h-screen md:p-24 z-10">
+            	<div class="w-full h-full bg-white border border-black rounded-xl p-10">
 					<div class="float-right text-xl font-semibold cursor-pointer"
 					 	 @click="closeModal">
 						X
