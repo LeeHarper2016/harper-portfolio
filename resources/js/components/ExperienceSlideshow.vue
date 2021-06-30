@@ -21,8 +21,8 @@
     	</div>
 	</div>
 	<div v-else-if="positions.length === 1"
-		 class="flex w-full bg-purple-200 border-t-2 border-b-2 border-purple-800 box-content">
-	    <div class="w-1/2 h-96 p-5 space-y-3">
+		 class="flex flex-col-reverse w-full bg-purple-200 border-t-2 border-b-2 border-purple-800 box-content md:flex-row">
+	    <div class="w-full p-5 space-y-3 text-center md:w-1/2 md:text-left">
 	    	<h2 class="font-bold text-2xl"
 	    		v-text="positions[0].company_name"></h2>
 	    	<span class="italic"
@@ -51,10 +51,10 @@
 		    	</button>
 	    	</div>
 	    </div>
-	    <div class="w-1/2">
+	    <div class="w-full md:w-1/2">
 		    <img :src="positions[0].img_src"
 		    	 :alt="positions[0].img_alt" 
-		    	 class="w-full">
+		    	 class="w-full max-h-96">
 	    </div>
 	</div>
 	<div v-else
@@ -62,11 +62,11 @@
 		 ref="positionSlideshow">
     	<transition-group name="fade"
     					  class="grid grid-cols-1">
-    		<div class="flex row-start-1 col-start-1"
+    		<div class="flex flex-col-reverse row-start-1 col-start-1 md:flex-row"
     			 v-for="(position, index) of positions"
 	    		 v-if="index === currentIndex"
 			     :key="position._id">
-			    <div class="p-5 space-y-3 w-1/2">
+	    		<div class="w-full p-5 space-y-3 text-center md:w-1/2 md:text-left">
 			    	<h2 class="font-bold text-2xl"
 			    		v-text="position.company_name"></h2>
 			    	<span class="italic"
@@ -97,9 +97,11 @@
 				    	</button>
 			    	</div>
 			    </div>
-			    <img :src="position.img_src"
-			    	 :alt="position.img_alt"
-			    	 class="w-1/2 h-96">
+	    		<div class="w-full md:w-1/2">
+				    <img :src="position.img_src"
+				    	 :alt="position.img_alt"
+				    	 class="w-full max-h-96">
+			    </div>
 	    	</div>
 		</transition-group>
 	</div>
