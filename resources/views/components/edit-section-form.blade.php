@@ -3,21 +3,18 @@
     <input type="hidden" name="name" id="name" value="{{ $anchor ?? null }}" class="border rounded-md block">
     <label for="title">
         Section Title:
-        <input type="text" name="title" id="title" class="border rounded-md block">
+        <input type="text" name="title" id="title" class="border rounded-md block p-1.5" placeholder="Section Name">
     </label>
     <label for="body">
-        Section Body:
-        <textarea cols="50" rows="5" id="body" name="body" class="border rounded-md block">
-            
-        </textarea>
+        <trix-modified inputId="body" inputName="body" placeholder="A summary of this section"></trix-modified>
     </label>
     <label for="image">
         Section Image:
-        <input type="file" name="image" id="image" class="border rounded-md block">
+        <input type="file" name="image" id="image" class="border rounded-md block p-1.5">
     </label>
     <label for="img_alt">
         Image Description:
-        <textarea cols="50" rows="5" id="img_alt" name="img_alt" class="border rounded-md block">
+        <textarea cols="50" rows="5" id="img_alt" name="img_alt" class="border rounded-md block p-1.5" placeholder="img_alt">
             
         </textarea>
     </label>
