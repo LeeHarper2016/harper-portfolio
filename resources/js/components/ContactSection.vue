@@ -6,7 +6,7 @@
     	  action="/contact"
     	  ref="contact_form"
     	  @submit.prevent="sendMail">
-        <div class="flex flex-row justify-between w-1/3">
+        <div class="flex flex-col justify-between w-2/3 md:w-1/3 md:flex-row">
             <label for="name" 
             	   class="flex flex-col">
                 Name:
