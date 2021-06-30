@@ -12,31 +12,30 @@
                 Name:
                 <input type="text" 
                 	   name="name" 
-                	   class="rounded-md border p-1.5">
+                	   class="rounded-md border p-1.5"
+                	   placeholder="Your name">
             </label>
             <label for="email" 
             	   class="flex flex-col">
                 Email:
                 <input type="email" 
                 	   name="email" 
-                	   class="rounded-md border p-1.5">
+                	   class="rounded-md border p-1.5"
+                	   placeholder="example@example.com">
             </label>
             <label for="phone" 
             	   class="flex flex-col">
                 Phone:
                 <input type="text" 
                 	   name="phone" 
-                	   class="rounded-md border p-1.5">
+                	   class="rounded-md border p-1.5"
+                	   placeholder="(111) 111-1111">
             </label>
         </div>
         <label for="body" 
         	   class="flex flex-col">
             Body:
-            <textarea name="body" 
-            		  rows="5" 
-            		  cols="40" 
-            		  class="rounded-md border p-1.5">
-            </textarea>
+            <TrixModified inputId="body" inputName="body" placeholder="Enter your message here."></TrixModified>
         </label>
         <button type="submit" 
         		class="border border-purple-800 rounded-lg p-3 bg-purple-300">
@@ -50,12 +49,17 @@
 </style>
 
 <script type="text/javascript">
+	import TrixModified from './TrixModified';
+
 	export default {
 		name: 'ContactSection',
 		data() {
 			return {
 				isVisible: true
 			}
+		},
+		components: {
+			TrixModified
 		},
 		methods: {
 			toggleVisibility() {
