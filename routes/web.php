@@ -22,7 +22,7 @@ use App\Http\Controllers\TextComponentController;
 
 Route::get('/', [HomeController::class, 'view']);
 
-Route::post('/login', [AuthController::class, 'logInUser']);
+Route::post('/login', [AuthController::class, 'logInUser'])->middleware('throttle:login');
 Route::get('/logout', [AuthController::class, 'logOutUser']);
 
 Route::post('/component/text', [TextComponentController::class, 'store']);
@@ -31,7 +31,7 @@ Route::post('/positions', [PositionController::class, 'store']);
 
 Route::post('/skills', [SkillController::class, 'store']);
 
-Route::post('/contact', [ContactController::class, 'sendMail']);
+Route::post('/contact', [ContactController::class, 'sendMail'])->middleware('throttle:contact');
 
 Route::get('/api/positions', [PositionController::class, 'viewJson']);
 Route::get('/api/skills', [SkillController::class, 'viewJson']);
