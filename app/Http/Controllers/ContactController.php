@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ContactRequest;
 use App\Mail\ClientMessaged;
 use App\Mail\OwnerMessaged;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
@@ -18,19 +18,18 @@ class ContactController extends Controller
      * Precondition: N/A.
      * Postcondition: N/A.
      * 
-     * @param Request $request The entire HTTP request.
+     * @param ContactRequest $request The validated information taken from the HTTP request.
      * @returns response A 200 status code for the message being successfully sent.
      * 
     ****************************************************************************************************/
-    public function sendMail(Request $request) {
-        $data = $request->only('name', 'email', 'phone', 'body');
+    public function sendMail(ContactRequest $request) {
 
         Mail:to($request->email)
             ->from(env('FROM_EMAIL'))
-            ->send(new ClientMessaged($data));
+            ->send(new ClientMessaged($request));
         Mail:to(env('TO_EMAIL'))
             ->from(env('FROM_EMAIL'))
-            ->send(new OwnerMessaged($data));
+            ->send(new OwnerMessaged($request));
 
         return response(200);
     }
