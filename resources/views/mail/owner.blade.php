@@ -14,7 +14,7 @@
                     <span class="block">{{ $message->name }} has sent you a message at {{ date('Y-m-d', time()) }}</span>
                     <span class="block">Message Body:</span>
                     <div>
-                        {{ $message->body }}
+                        {{ $message->contact_body }}
                     </div>
                     <div>
                         You can contact {{ $message->name }} at {{ $message->email }} and {{ $message->phone }}.
