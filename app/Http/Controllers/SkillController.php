@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\SkillRequest;
 use App\Models\Skill;
 
 class SkillController extends Controller
@@ -14,11 +14,11 @@ class SkillController extends Controller
      * Precondition: N/A.
      * Postcondition: N/A.
      * 
-     * @param Request $request The entire HTTP request.
+     * @param SkillRequest $request The validated data from the HTTP request.
      * @returns json The JSON object that details the newly-stored skill.
      * 
     ****************************************************************************************************/
-    public function store(Request $request) {
+    public function store(SkillRequest $request) {
         $skill = Skill::create([
             'name' => $request->skill_name,
             'img_src' => 'images/uploaded/' . $request->image->hashName(),
