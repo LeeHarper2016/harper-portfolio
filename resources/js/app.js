@@ -1,4 +1,6 @@
 require('./bootstrap');
+require('trix');
+import 'trix/dist/trix.css';
 
 import Vue from 'vue';
 
