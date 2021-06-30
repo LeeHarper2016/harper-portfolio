@@ -35,7 +35,7 @@
         <label for="body" 
         	   class="flex flex-col">
             Body:
-            <TrixModified input-id="body" input-name="body" placeholder="Enter your message here."></TrixModified>
+            <TrixModified input-id="contact_body" input-name="contact_body" placeholder="Enter your message here."></TrixModified>
         </label>
         <button type="submit" 
         		class="border border-purple-800 rounded-lg p-3 bg-purple-300">
