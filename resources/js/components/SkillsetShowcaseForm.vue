@@ -13,14 +13,15 @@
             <input type="text" 
             	   name="skill_name" 
             	   id="skill_name" 
-            	   class="border rounded-md block">
+            	   class="border rounded-md block p-1.5"
+            	   placeholder="HTML">
         </label>
         <label for="image">
             Skill Image:
             <input type="file" 
             	   name="image" 
             	   id="image" 
-            	   class="border rounded-md block">
+            	   class="border rounded-md block p-1.5">
         </label>
         <label for="img_alt">
             Image Description:
@@ -28,7 +29,8 @@
             		  rows="5" 
             		  id="img_alt" 
             		  name="img_alt" 
-            		  class="border rounded-md block">
+            		  class="border rounded-md block p-1.5"
+            	   	  placeholder="A short description of the image uploaded.">
                 
             </textarea>
         </label>
