@@ -27,7 +27,7 @@ class ContactRequest extends FormRequest
             'name' => ['required'],
             'email' => ['required', 'email'],
             'phone' => ['required', 'regex:/\(?\d{3}\)?\s?[0-9]\d{2}-?\d{4}/'],
-            'body' => ['required']
+            'contact_body' => ['required']
        ];
     }
 }
