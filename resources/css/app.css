@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.defaultCSS h1 {
+    @apply text-2xl font-bold;
+}
+
+.defaultCSS ul {
+    @apply block list-disc m-4 pl-10;
+}
+
+.defaultCSS ol {
+    @apply block list-decimal m-4 pl-10;
+}
+
+.defaultCSS pre {
+    @apply block font-mono whitespace-pre mt-4 mb-4 mr-0 ml-0;
+}
+
+.defaultCSS blockquote {
+    @apply block mt-4 mb-4 ml-10 mr-10;
+}
+
+.defaultCSS a {
+    @apply text-blue-600 underline cursor-auto;
+}
+
+.defaultCSS a:visited {
+    @apply text-purple-600 underline cursor-auto;
+}
