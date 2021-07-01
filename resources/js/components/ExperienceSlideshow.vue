@@ -14,10 +14,7 @@
 		        	{{ positions[0].body }}
 		        </template>
 		    </Modal>
-	    	<ExperienceSlideshowForm></ExperienceSlideshowForm>
-	    	<button class="bg-red-400 rounded-lg p-3 border border-purple-800">
-	    		Delete Position
-	    	</button>
+	    	<ExperienceSlideshowForm v-if="user"></ExperienceSlideshowForm>
     	</div>
 	</div>
 	<div v-else-if="positions.length === 1"
@@ -48,10 +45,7 @@
 					    	 </div>
 			        </template>
 			    </Modal>
-		    	<ExperienceSlideshowForm></ExperienceSlideshowForm>
-		    	<button class="bg-red-400 rounded-lg p-3 border border-purple-800">
-		    		Delete Position
-		    	</button>
+		    	<ExperienceSlideshowForm v-if="user"></ExperienceSlideshowForm>
 	    	</div>
 	    </div>
 	    <div class="w-full md:w-1/2">
@@ -97,10 +91,7 @@
 						    	 </div>
 					        </template>
 					    </Modal>
-				    	<ExperienceSlideshowForm></ExperienceSlideshowForm>
-				    	<button class="bg-red-400 rounded-lg p-3 border border-purple-800">
-				    		Delete Position
-				    	</button>
+				    	<ExperienceSlideshowForm v-if="user"></ExperienceSlideshowForm>
 			    	</div>
 			    </div>
 	    		<div class="w-full md:w-1/2">
@@ -132,6 +123,7 @@
 			ExperienceSlideshowForm,
 			Modal
 		},
+		props: ['user'],
 		data() {
 			return {
 				currentIndex: 0,
