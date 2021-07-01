@@ -6,7 +6,32 @@
         <a href="#experience" class="text-xl duration-300 rounded-md p-2 hover:bg-gray-100 hover:text-gray-700">Experience</a>
         <a href="#education" class="text-xl duration-300 rounded-md p-2 hover:bg-gray-100 hover:text-gray-700">Education</a>
         <a href="#skills" class="text-xl duration-300 rounded-md p-2 hover:bg-gray-100 hover:text-gray-700">Skills</a>
-        <a href="#contact" class="text-xl duration-300 rounded-md p-2 hover:bg-gray-100 hover:text-gray-700 hover:scale-125">Contact</a>
+        <a href="#contact" class="text-xl duration-300 rounded-md p-2 hover:bg-gray-100 hover:text-gray-700">Contact</a>
+        <modal v-if="!this.user" class="inline" button_classes="font-bold text-xl duration-300 rounded-md p-2 hover:bg-gray-100 hover:text-gray-700">
+            <template #button_text>
+                Login
+            </template>
+            <template #header>
+                Log In
+            </template>
+            <template #content>
+			    <form action="/login" method="POST" class="flex flex-col items-center space-y-6 font-normal">
+			        @csrf
+			        <label for="name">
+			            Username:
+			            <input type="text" name="name" id="name" class="border rounded-md block p-1.5" placeholder="User">
+			        </label>
+			        <label for="password">
+			            Password:
+			            <input type="password" name="password" id="password" class="border rounded-md block p-1.5" placeholder="Password">
+			        </label>
+			        <button type="submit" class="border border-purple-800 rounded-lg p-3 bg-purple-300">
+			            Log In
+			        </button>
+			    </form>
+            </template>
+        </modal>
+        <a v-else href="/logout" class="font-bold text-xl duration-300 rounded-md p-2 hover:bg-gray-100 hover:text-gray-700">Log Out</a>
     </nav>
 </template>
 
@@ -14,12 +39,18 @@
 </style>
 
 <script type="text/javascript">
+	import Modal from './Modal';
+
 	export default {
 		name: 'NavbarMenu',
+		props: ['user'],
 		data() {
 			return {
 				collapsed: true
 			}
+		},
+		components: {
+			Modal
 		},
 		methods: {
 			toggleCollapse() {
