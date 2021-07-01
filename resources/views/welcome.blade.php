@@ -52,7 +52,12 @@
                         </modal>
                     </div>
                 @endif
-                <experience-slideshow></experience-slideshow>
+                @auth
+                <experience-slideshow :user="true"></experience-slideshow>
+                @endauth
+                @guest
+                <experience-slideshow :user="false"></experience-slideshow>
+                @endguest
                 @if (sizeof($sections) >= 2)
                     <a name="education"></a>
                     @component('components.text-section', ['section' => $sections[1]])
