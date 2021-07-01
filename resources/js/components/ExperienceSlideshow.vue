@@ -54,6 +54,27 @@
 						    	 </div>
 					        </template>
 					    </Modal>
+		    		    <Modal class="inline" 
+					    	   button_classes="bg-purple-400 rounded-lg p-3 border border-purple-800"
+							   @open="toggleInterval"
+							   @close="toggleInterval">
+					        <template #button_text>
+					        	View All
+					        </template>
+					        <template #header>
+					        	All Recorded Positions
+					        </template>
+					        <template #content>
+					        	<div v-for="position of positions"
+					        		 class="flex flex-col p-3 space-y-5 border-b overflow-x-hidden md:flex-row md:space-x-5">
+								    <img :src="position.img_src"
+								    	 :alt="position.img_alt" 
+								    	 class="w-full h-56 ml-auto mr-auto mb-5 rounded-lg border border-purple-800 md:w-1/2">
+					        		<div v-html="position.description">
+					        		</div>
+					        	</div>
+					        </template>
+					    </Modal>
 				    	<ExperienceSlideshowForm v-if="user"></ExperienceSlideshowForm>
 			    	</div>
 			    </div>
