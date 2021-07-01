@@ -17,43 +17,6 @@
 	    	<ExperienceSlideshowForm v-if="user"></ExperienceSlideshowForm>
     	</div>
 	</div>
-	<div v-else-if="positions.length === 1"
-		 class="flex flex-col-reverse w-full bg-purple-200 border-t-2 border-b-2 border-purple-800 box-content md:flex-row">
-	    <div class="w-full p-5 space-y-3 text-center md:w-1/2 md:text-left">
-	    	<h2 class="font-bold text-2xl"
-	    		v-text="positions[0].company_name"></h2>
-	    	<span class="italic"
-	    		  v-text="positions[0].position"></span>
-	    	<div v-html="positions[0].description"
-				 class="defaultCSS">
-	    	</div>
-	    	<div class="flex w-full justify-around">
-    		    <Modal class="inline" 
-			    	   button_classes="bg-purple-400 rounded-lg p-3 border border-purple-800">
-			        <template #button_text>
-			        	More Info
-			        </template>
-			        <template #header>
-			        	{{ positions[0].company_name }}
-			        </template>
-			        <template #content>
-					    <img :src="positions[0].img_src"
-					    	 :alt="positions[0].img_alt" 
-					    	 class="w-1/2 h-56 ml-auto mr-auto mb-5 rounded-lg border border-purple-800">
-					    	 <div v-html="positions[0].body"
-						    	  class="defaultCSS">
-					    	 </div>
-			        </template>
-			    </Modal>
-		    	<ExperienceSlideshowForm v-if="user"></ExperienceSlideshowForm>
-	    	</div>
-	    </div>
-	    <div class="w-full md:w-1/2">
-		    <img :src="positions[0].img_src"
-		    	 :alt="positions[0].img_alt" 
-		    	 class="w-full max-h-96">
-	    </div>
-	</div>
 	<div v-else
 		 class="bg-purple-200 border-t-2 border-b-2 border-purple-800"
 		 ref="positionSlideshow">
