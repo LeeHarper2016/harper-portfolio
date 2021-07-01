@@ -15,20 +15,7 @@
                 Log In
             </template>
             <template #content>
-			    <form action="/login" method="POST" class="flex flex-col items-center space-y-6 font-normal">
-			        @csrf
-			        <label for="name">
-			            Username:
-			            <input type="text" name="name" id="name" class="border rounded-md block p-1.5" placeholder="User">
-			        </label>
-			        <label for="password">
-			            Password:
-			            <input type="password" name="password" id="password" class="border rounded-md block p-1.5" placeholder="Password">
-			        </label>
-			        <button type="submit" class="border border-purple-800 rounded-lg p-3 bg-purple-300">
-			            Log In
-			        </button>
-			    </form>
+				<LoginForm></LoginForm>
             </template>
         </modal>
         <a v-else href="/logout" class="font-bold text-xl duration-300 rounded-md p-2 hover:bg-gray-100 hover:text-gray-700">Log Out</a>
@@ -39,6 +26,7 @@
 </style>
 
 <script type="text/javascript">
+	import LoginForm from './LoginForm';
 	import Modal from './Modal';
 
 	export default {
@@ -50,6 +38,7 @@
 			}
 		},
 		components: {
+			LoginForm,
 			Modal
 		},
 		methods: {
