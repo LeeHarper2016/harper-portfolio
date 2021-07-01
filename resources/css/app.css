@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
 .defaultCSS h1 {
     @apply text-2xl font-bold;
 }
