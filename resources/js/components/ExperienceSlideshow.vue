@@ -2,18 +2,6 @@
 	<div v-if="positions.length === 0"
 		 class="flex w-full bg-purple-200 border-t-2 border-b-2 border-purple-800 p-5">
 		 <div class="flex w-full justify-around">
-		    <Modal class="inline" 
-		    	   button_classes="bg-purple-400 rounded-lg p-3 border border-purple-800">
-		        <template #button_text>
-		        	More Info
-		        </template>
-		        <template #header>
-		        	{{ positions[0].company_name }}
-		        </template>
-		        <template #content>
-		        	{{ positions[0].body }}
-		        </template>
-		    </Modal>
 	    	<ExperienceSlideshowForm v-if="user"></ExperienceSlideshowForm>
     	</div>
 	</div>
