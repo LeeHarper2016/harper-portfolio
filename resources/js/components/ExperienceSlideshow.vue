@@ -27,8 +27,9 @@
 	    		v-text="positions[0].company_name"></h2>
 	    	<span class="italic"
 	    		  v-text="positions[0].position"></span>
-	    	<p v-text="positions[0].description">
-	    	</p>
+	    	<div v-html="positions[0].description"
+				 class="defaultCSS">
+	    	</div>
 	    	<div class="flex w-full justify-around">
     		    <Modal class="inline" 
 			    	   button_classes="bg-purple-400 rounded-lg p-3 border border-purple-800">
@@ -42,7 +43,9 @@
 					    <img :src="positions[0].img_src"
 					    	 :alt="positions[0].img_alt" 
 					    	 class="w-1/2 h-56 ml-auto mr-auto mb-5 rounded-lg border border-purple-800">
-			        	{{ positions[0].body }}
+					    	 <div v-html="positions[0].body"
+						    	  class="defaultCSS">
+					    	 </div>
 			        </template>
 			    </Modal>
 		    	<ExperienceSlideshowForm></ExperienceSlideshowForm>
@@ -71,8 +74,9 @@
 			    		v-text="position.company_name"></h2>
 			    	<span class="italic"
 			    		  v-text="position.position"></span>
-			    	<p v-text="position.description">
-			    	</p>
+			    	<div v-html="position.description"
+						 class="defaultCSS">
+			    	</div>
 			    	<div class="flex w-full justify-around">
 		    		    <Modal class="inline" 
 					    	   button_classes="bg-purple-400 rounded-lg p-3 border border-purple-800"
@@ -88,7 +92,9 @@
 							    <img :src="position.img_src"
 							    	 :alt="position.img_alt" 
 							    	 class="w-1/2 h-56 ml-auto mr-auto mb-5 rounded-lg border border-purple-800">
-					        	{{ position.body }}
+						    	 <div v-html="position.body"
+						    	 	  class="defaultCSS">
+						    	 </div>
 					        </template>
 					    </Modal>
 				    	<ExperienceSlideshowForm></ExperienceSlideshowForm>
