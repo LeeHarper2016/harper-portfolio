@@ -42,6 +42,12 @@
                     <a href="/logout" class="hover:text-gray-800 text-xl duration-300">Log Out</a>
                     @endauth
                 </nav>
+                <div class="flex flex-col w-full h-full justify-center mr-auto ml-auto items-center">
+                    <div class="flex flex-col justify-around w-1/3 h-1/3 bg-white bg-opacity-80 rounded-xl p-5 text-center">
+                        <h1 class="block font-bold text-4xl underline">Page Header</h1>
+                        <h2 class="block font-bold text-3xl underline">Page Subheader</h2>
+                    </div>
+                </div>
             </header>
             <main class="w-full bg-white border-t-4 border-purple-600">
                 @if (sizeof($sections) >= 1)
