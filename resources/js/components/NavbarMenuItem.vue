@@ -1,5 +1,6 @@
 <template>
-    <a v-if="type === 'menuButton'"
+    <a @click="toggleMenu"
+       v-if="type === 'menuButton'"
        class="text-xl duration-300 rounded-md p-2 cursor-pointer hover:bg-gray-100 hover:text-gray-700 md:hidden">
            <slot></slot>
        </a>
@@ -41,6 +42,11 @@
 		components: {
             LoginForm,
 			Modal
-		}
+		},
+        methods: {
+            toggleMenu() {
+                this.$emit('menuToggled');
+            }
+        }
 	};
 </script>
