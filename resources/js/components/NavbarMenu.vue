@@ -1,7 +1,8 @@
 <template>
-    <nav class="flex flex-col overflow-hidden h-20 bg-white justify-between p-5 font-bold border-purple-800 border-b-2 transition-all duration-400 md:flex-row md:bg-transparent md:border-none"
+    <nav class="flex flex-col overflow-hidden h-20 bg-white justify-between p-5 font-bold border-purple-800 border-b-2 transition-all duration-400 md:flex-row md:justify-around md:bg-transparent md:border-none"
     	 ref="navbarMenu">
-    	<NavbarMenuItem type="menuButton">Menu</NavbarMenuItem>
+    	<NavbarMenuItem @menuToggled="toggleCollapse" 
+    					type="menuButton">Menu</NavbarMenuItem>
         <NavbarMenuItem anchor="#about">About</NavbarMenuItem>
         <NavbarMenuItem anchor="#experience">Experience</NavbarMenuItem>
         <NavbarMenuItem anchor="#education">Education</NavbarMenuItem>
