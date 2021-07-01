@@ -6,22 +6,6 @@
             <a href="#education" class="text-xl duration-300 hover:text-gray-700">Education</a>
             <a href="#skills" class="text-xl duration-300 hover:text-gray-700">Skills</a>
             <a href="#contact" class="text-xl duration-300 hover:text-gray-700 hover:scale-125">Contact</a>
-            @guest
-            <modal class="inline" button_classes="hover:text-gray-800 text-xl font-bold duration-300">
-                <template #button_text>
-                    Login
-                </template>
-                <template #header>
-                    Log In
-                </template>
-                <template #content>
-                    <x-login-form />
-                </template>
-            </modal>
-            @endguest
-            @auth
-            <a href="/logout" class="hover:text-gray-800 text-xl duration-300">Log Out</a>
-            @endauth
         </nav>
         <div class="flex flex-col w-full h-full justify-center mr-auto ml-auto items-center">
             <div class="flex flex-col justify-around w-1/3 h-1/3 bg-white bg-opacity-80 rounded-xl p-5 text-center">
@@ -46,7 +30,7 @@
 		name: 'NavbarMenu',
 		data() {
 			return {
-				collapsed: true;
+				collapsed: true
 			}
 		},
 		methods: {
