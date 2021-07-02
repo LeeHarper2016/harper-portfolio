@@ -82,6 +82,10 @@
                 <a name="contact"></a>
                 <contact-section></contact-section>
             </main>
+            <footer class="flex justify-between items-end w-full h-24 bg-blue-200 border-t-2 border-blue-800 p-5">
+                <a href="#top" class="font-bold text-lg">Return To Top</a>
+                <span class="">&copy; LeeHarper.dev</span>
+            </footer>
         </div>
     </body>
 </html>
