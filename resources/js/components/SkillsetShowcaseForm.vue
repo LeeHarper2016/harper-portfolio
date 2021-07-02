@@ -8,7 +8,7 @@
 		  <input type="hidden"
 		  		 name="_token"
 		  		 :value="csrfToken">
-        <label for="skill_name">
+        <label for="name">
             Skill Name:
             <input type="text" 
             	   name="name" 
