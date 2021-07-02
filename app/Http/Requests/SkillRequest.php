@@ -25,7 +25,6 @@ class SkillRequest extends FormRequest
     {
         return [
             'name' => ['required'],
-            'img_src' => 'images/uploaded/' . $request->image->hashName(),
             'img_alt' => ['required']
         ];
     }
