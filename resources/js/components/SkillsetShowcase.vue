@@ -1,23 +1,8 @@
 <template>
     <div class="p-8 w-full">
-    	<div class="text-center md:text-left">
+    	<div class="text-center">
 	        <h2 class="inline-block font-bold text-3xl mb-3 mr-5">My Skillset</h2>
-	        <hr class="border-blue-800 w-full md:w-1/4">
-	        <p>
-	            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-	            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	        </p>
+	        <hr class="border-blue-800 w-full ml-auto mr-auto md:w-1/4">
     	</div>
         <div v-if="user"
         	 class="flex justify-center p-5">
@@ -40,7 +25,7 @@
         		 class="text-center m-5">
         		<img :src="skill.img_src"
         		 	 :alt="skill.img_alt"
-        		 	 class="">
+        		 	 class="w-24 h-24 md:w-36 md:h-36">
         		<span v-text="skill.name"
         			  class="w-full text-xl font-bold"></span>
     		</div>
