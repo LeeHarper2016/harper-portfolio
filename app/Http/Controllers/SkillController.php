@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\SkillRequest;
 use App\Models\Skill;
 
+use Intervention\Image\ImageManagerStatic as Image;
+
 class SkillController extends Controller
 {
     /****************************************************************************************************
@@ -25,7 +27,9 @@ class SkillController extends Controller
             'img_alt' => $request->img_alt
         ]);
 
-        $request->image->store('/images/uploaded');
+        $compressedImage = Image::make($request->image->getRealPath());
+        $compressedImage->resize(350, 350);
+        $compressedImage->save($skill->img_src);
 
         return json_encode($skill);
     }
