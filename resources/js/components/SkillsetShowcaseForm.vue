@@ -1,18 +1,18 @@
 <template>
-	<form action="/skills" 
+	<form @submit.prevent="submitSkill"
+		  action="/skills" 
 		  method="POST" 
 		  ref="skill_form"
 		  class="flex flex-col items-center space-y-6 font-normal" 
-		  enctype="multipart/form-data"
-		  @submit.prevent="submitSkill">
+		  enctype="multipart/form-data">
 		  <input type="hidden"
 		  		 name="_token"
 		  		 :value="csrfToken">
         <label for="skill_name">
             Skill Name:
             <input type="text" 
-            	   name="skill_name" 
-            	   id="skill_name" 
+            	   name="name" 
+            	   id="name" 
             	   class="border rounded-md block p-1.5"
             	   placeholder="HTML">
         </label>
