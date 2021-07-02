@@ -38,7 +38,7 @@
             <TrixModified input-id="contact_body" input-name="contact_body" placeholder="Enter your message here."></TrixModified>
         </label>
         <button type="submit" 
-        		class="border border-purple-800 rounded-lg p-3 bg-purple-300">
+        		class="border border-blue-800 rounded-lg p-3 bg-blue-300">
             Submit
         </button>
     </form>

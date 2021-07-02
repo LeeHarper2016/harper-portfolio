@@ -1,12 +1,12 @@
 <template>
 	<div v-if="positions.length === 0"
-		 class="flex w-full bg-purple-200 border-t-2 border-b-2 border-purple-800 p-5">
+		 class="flex w-full bg-blue-200 border-t-2 border-b-2 border-blue-800 p-5">
 		 <div class="flex w-full justify-around">
 	    	<ExperienceSlideshowForm v-if="user"></ExperienceSlideshowForm>
     	</div>
 	</div>
 	<div v-else
-		 class="bg-purple-200 border-t-2 border-b-2 border-purple-800"
+		 class="bg-blue-200 border-t-2 border-b-2 border-blue-800"
 		 ref="positionSlideshow">
     	<transition-group name="fade"
     					  class="grid grid-cols-1">
@@ -24,7 +24,7 @@
 			    	</div>
 			    	<div class="flex w-full justify-around">
 		    		    <Modal class="inline" 
-					    	   button_classes="bg-purple-400 rounded-lg p-3 border border-purple-800"
+					    	   button_classes="bg-blue-400 rounded-lg p-3 border border-blue-800"
 							   @open="toggleInterval"
 							   @close="toggleInterval">
 					        <template #button_text>
@@ -36,14 +36,14 @@
 					        <template #content>
 							    <img :src="position.img_src"
 							    	 :alt="position.img_alt" 
-							    	 class="w-1/2 h-56 ml-auto mr-auto mb-5 rounded-lg border border-purple-800">
+							    	 class="w-1/2 h-56 ml-auto mr-auto mb-5 rounded-lg border border-blue-800">
 						    	 <div v-html="position.body"
 						    	 	  class="defaultCSS">
 						    	 </div>
 					        </template>
 					    </Modal>
 		    		    <Modal class="inline" 
-					    	   button_classes="bg-purple-400 rounded-lg p-3 border border-purple-800"
+					    	   button_classes="bg-blue-400 rounded-lg p-3 border border-blue-800"
 							   @open="toggleInterval"
 							   @close="toggleInterval">
 					        <template #button_text>
@@ -57,7 +57,7 @@
 					        		 class="flex flex-col p-3 space-y-5 border-b overflow-x-hidden md:flex-row md:space-x-5">
 								    <img :src="position.img_src"
 								    	 :alt="position.img_alt" 
-								    	 class="w-full h-56 ml-auto mr-auto mb-5 rounded-lg border border-purple-800 md:w-1/2">
+								    	 class="w-full h-56 ml-auto mr-auto mb-5 rounded-lg border border-blue-800 md:w-1/2">
 					        		<div v-html="position.description">
 					        		</div>
 					        	</div>

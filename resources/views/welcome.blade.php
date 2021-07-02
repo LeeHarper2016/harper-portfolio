@@ -32,14 +32,14 @@
                     </div>
                 </div>
             </header>
-            <main class="w-full bg-white border-t-4 border-purple-600">
+            <main class="w-full bg-white border-t-4 border-blue-600">
                 @if (sizeof($sections) >= 1)
                     <a name="about"></a>
                     @component('components.text-section', ['section' => $sections[0]])
                     @endcomponent
                 @else
                     <div class="p-5 w-full">
-                        <modal class="inline" button_classes="block p-1.5 bg-purple-200 rounded-lg border border-purple-800 text-center ml-auto mr-auto">
+                        <modal class="inline" button_classes="block p-1.5 bg-blue-200 rounded-lg border border-blue-800 text-center ml-auto mr-auto">
                             <template #button_text>
                                 Add About Section
                             </template>
@@ -64,7 +64,7 @@
                     @endcomponent
                 @else
                     <div class="p-5 w-full">
-                        <modal class="inline" button_classes="block p-1.5 bg-purple-200 rounded-lg border border-purple-800 text-center ml-auto mr-auto">
+                        <modal class="inline" button_classes="block p-1.5 bg-blue-200 rounded-lg border border-blue-800 text-center ml-auto mr-auto">
                             <template #button_text>
                                 Add Education Section
                             </template>
@@ -82,6 +82,10 @@
                 <a name="contact"></a>
                 <contact-section></contact-section>
             </main>
+            <footer class="flex justify-between items-end w-full h-24 bg-blue-200 border-t-2 border-blue-800 p-5">
+                <a href="#top" class="font-bold text-lg">Return To Top</a>
+                <span class="">&copy; LeeHarper.dev</span>
+            </footer>
         </div>
     </body>
 </html>
