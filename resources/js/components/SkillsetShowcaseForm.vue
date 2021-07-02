@@ -16,24 +16,6 @@
             	   class="border rounded-md block p-1.5"
             	   placeholder="HTML">
         </label>
-        <label for="image">
-            Skill Image:
-            <input type="file" 
-            	   name="image" 
-            	   id="image" 
-            	   class="border rounded-md block p-1.5">
-        </label>
-        <label for="img_alt">
-            Image Description:
-            <textarea cols="50" 
-            		  rows="5" 
-            		  id="img_alt" 
-            		  name="img_alt" 
-            		  class="border rounded-md block p-1.5"
-            	   	  placeholder="A short description of the image uploaded.">
-                
-            </textarea>
-        </label>
         <button type="submit" 
         		class="border border-blue-800 rounded-lg p-3 bg-blue-300">
             Submit
