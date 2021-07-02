@@ -82,7 +82,12 @@
                     @endauth
                 @endif
                 <a name="skills"></a>
-                <skillset-showcase></skillset-showcase>
+                @auth
+                    <skillset-showcase user="true"></skillset-showcase>
+                @endauth
+                @guest
+                    <skillset-showcase user="false"></skillset-showcase>
+                @endguest
                 <a name="contact"></a>
                 <contact-section></contact-section>
             </main>
