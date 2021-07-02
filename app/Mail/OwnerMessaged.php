@@ -30,6 +30,6 @@ class OwnerMessaged extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.owner')->with(['message' => $this->messageData]);
+        return $this->view('mail.owner')->with(['messageData' => $this->messageData]);
     }
 }
