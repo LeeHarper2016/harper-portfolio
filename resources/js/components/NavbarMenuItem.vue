@@ -8,7 +8,9 @@
     	   class="inline" 
     	   button_classes="font-bold text-xl duration-300 rounded-md p-2 hover:bg-gray-100 hover:text-gray-700">
         <template #button_text>
-            <slot></slot>
+            <div @click="itemClicked">
+                <slot></slot>
+            </div>
         </template>
         <template #header>
             Log In
@@ -23,6 +25,7 @@
            <slot></slot>
        </a>
     <a v-else
+       @click="itemClicked"
        :href="anchor"
        class="text-xl duration-300 rounded-md p-2 hover:bg-gray-100 hover:text-gray-700">
     	<slot></slot>
@@ -46,6 +49,9 @@
         methods: {
             toggleMenu() {
                 this.$emit('menuToggled');
+            },
+            itemClicked() {
+                this.$emit('itemClicked')
             }
         }
 	};
