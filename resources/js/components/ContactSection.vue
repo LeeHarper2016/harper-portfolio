@@ -4,8 +4,7 @@
     <form class="flex flex-col items-center mt-5 space-y-5" 
     	  method="POST" 
     	  action="/contact"
-    	  ref="contact_form"
-    	  @submit.prevent="sendMail">
+    	  ref="contact_form">
         <div class="flex flex-col justify-between w-2/3 md:w-1/3 md:flex-row">
             <label for="name" 
             	   class="flex flex-col">
