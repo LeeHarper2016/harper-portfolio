@@ -38,19 +38,21 @@
                     @component('components.text-section', ['section' => $sections[0]])
                     @endcomponent
                 @else
-                    <div class="p-5 w-full">
-                        <modal class="inline" button_classes="block p-1.5 bg-blue-200 rounded-lg border border-blue-800 text-center ml-auto mr-auto">
-                            <template #button_text>
-                                Add About Section
-                            </template>
-                            <template #header>
-                                Add "About" Section
-                            </template>
-                            <template #content>
-                                <x-edit-section-form anchor="about" /> 
-                            </template>
-                        </modal>
-                    </div>
+                    @auth
+                        <div class="p-5 w-full">
+                            <modal class="inline" button_classes="block p-1.5 bg-blue-200 rounded-lg border border-blue-800 text-center ml-auto mr-auto">
+                                <template #button_text>
+                                    Add About Section
+                                </template>
+                                <template #header>
+                                    Add "About" Section
+                                </template>
+                                <template #content>
+                                    <x-edit-section-form anchor="about" /> 
+                                </template>
+                            </modal>
+                        </div>
+                    @endauth
                 @endif
                 @auth
                 <experience-slideshow :user="true"></experience-slideshow>
@@ -63,19 +65,21 @@
                     @component('components.text-section', ['section' => $sections[1]])
                     @endcomponent
                 @else
-                    <div class="p-5 w-full">
-                        <modal class="inline" button_classes="block p-1.5 bg-blue-200 rounded-lg border border-blue-800 text-center ml-auto mr-auto">
-                            <template #button_text>
-                                Add Education Section
-                            </template>
-                            <template #header>
-                                Add "Education" Section
-                            </template>
-                            <template #content>
-                                <x-edit-section-form anchor="education" /> 
-                            </template>
-                        </modal>
-                    </div>
+                    @auth
+                        <div class="p-5 w-full">
+                            <modal class="inline" button_classes="block p-1.5 bg-blue-200 rounded-lg border border-blue-800 text-center ml-auto mr-auto">
+                                <template #button_text>
+                                    Add Education Section
+                                </template>
+                                <template #header>
+                                    Add "Education" Section
+                                </template>
+                                <template #content>
+                                    <x-edit-section-form anchor="education" /> 
+                                </template>
+                            </modal>
+                        </div>
+                    @endauth
                 @endif
                 <a name="skills"></a>
                 <skillset-showcase></skillset-showcase>
