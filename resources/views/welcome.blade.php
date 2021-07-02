@@ -83,10 +83,10 @@
                 @endif
                 <a name="skills"></a>
                 @auth
-                    <skillset-showcase user="true"></skillset-showcase>
+                    <skillset-showcase :user="true"></skillset-showcase>
                 @endauth
                 @guest
-                    <skillset-showcase user="false"></skillset-showcase>
+                    <skillset-showcase :user="false"></skillset-showcase>
                 @endguest
                 <a name="contact"></a>
                 <contact-section></contact-section>
