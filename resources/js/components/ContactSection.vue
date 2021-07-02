@@ -5,6 +5,9 @@
     	  method="POST" 
     	  action="/contact"
     	  ref="contact_form">
+		<input type="hidden"
+			   name="_token"
+			   :value="csrfToken">
         <div class="flex flex-col justify-between w-2/3 md:w-1/3 md:flex-row">
             <label for="name" 
             	   class="flex flex-col">
