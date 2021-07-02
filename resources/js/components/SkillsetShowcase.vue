@@ -22,10 +22,7 @@
         <div class="flex flex-wrap justify-center w-2/3 mr-auto ml-auto">
         	<div v-for="skill of skills"
         		 :key="skill.id"
-        		 class="text-center m-5">
-        		<img :src="skill.img_src"
-        		 	 :alt="skill.img_alt"
-        		 	 class="w-24 h-24 md:w-36 md:h-36">
+        		 class="text-center m-5 rounded-md bg-blue-300 border border-blue-800 p-3">
         		<span v-text="skill.name"
         			  class="w-full text-xl font-bold"></span>
     		</div>
