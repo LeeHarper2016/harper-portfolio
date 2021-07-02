@@ -2,7 +2,7 @@
     <div class="p-8 w-full">
     	<div class="text-center md:text-left">
 	        <h2 class="inline-block font-bold text-3xl mb-3 mr-5">My Skillset</h2>
-	        <hr class="border-purple-800 w-full md:w-1/4">
+	        <hr class="border-blue-800 w-full md:w-1/4">
 	        <p>
 	            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -21,7 +21,7 @@
     	</div>
         <div class="flex justify-center p-5">
 		    <Modal class="inline" 
-		    	   button_classes="bg-purple-200 rounded-lg p-3 border border-purple-800">
+		    	   button_classes="bg-blue-200 rounded-lg p-3 border border-blue-800">
 		        <template #button_text>
 		            Add Skill
 		        </template>

@@ -1,6 +1,6 @@
 <template>
     <Modal class="inline" 
-    	   button_classes="bg-purple-400 rounded-lg p-3 border border-purple-800">
+    	   button_classes="bg-blue-400 rounded-lg p-3 border border-blue-800">
         <template #button_text>
             Add Position
         </template>
@@ -60,7 +60,7 @@
                     </textarea>
                 </label>
                 <button type="submit" 
-                		class="border border-purple-800 rounded-lg p-3 bg-purple-300">
+                		class="border border-blue-800 rounded-lg p-3 bg-blue-300">
                     Submit
                 </button>
             </form>

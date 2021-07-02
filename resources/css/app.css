@@ -31,5 +31,5 @@ html {
 }
 
 .defaultCSS a:visited {
-    @apply text-purple-600 underline cursor-auto;
+    @apply text-blue-600 underline cursor-auto;
 }
