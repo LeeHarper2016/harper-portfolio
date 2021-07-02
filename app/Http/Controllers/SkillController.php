@@ -20,7 +20,7 @@ class SkillController extends Controller
     ****************************************************************************************************/
     public function store(SkillRequest $request) {
         $skill = Skill::create([
-            'name' => $request->skill_name,
+            'name' => $request->name,
             'img_src' => 'images/uploaded/' . $request->image->hashName(),
             'img_alt' => $request->img_alt
         ]);
