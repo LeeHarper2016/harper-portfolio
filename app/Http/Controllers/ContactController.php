@@ -25,10 +25,8 @@ class ContactController extends Controller
     public function sendMail(ContactRequest $request) {
 
         Mail::to($request->email)
-            ->from(env('FROM_EMAIL'))
             ->send(new ClientMessaged($request));
         Mail::to(env('TO_EMAIL'))
-            ->from(env('FROM_EMAIL'))
             ->send(new OwnerMessaged($request));
 
         return back();
