@@ -29,9 +29,9 @@
                 <navbar-menu :user="false"></navbar-menu>
                 @endguest
                 <div class="flex flex-col w-full h-full justify-center mr-auto ml-auto items-center">
-                    <div class="flex flex-col justify-around w-1/3 h-1/3 bg-white bg-opacity-80 rounded-xl p-5 text-center">
-                        <h1 class="block font-bold text-4xl underline">Page Header</h1>
-                        <h2 class="block font-bold text-3xl underline">Page Subheader</h2>
+                    <div class="flex flex-col justify-around w-2/3 h-1/3 bg-white bg-opacity-80 rounded-xl p-5 text-center md:w-1/3 md:h-1/3">
+                        <h1 class="block font-bold text-xl underline md:text-4xl">Page Header</h1>
+                        <h2 class="block font-bold text-lg underline md:text-3xl">Page Subheader</h2>
                     </div>
                 </div>
             </header>
@@ -58,9 +58,11 @@
                     @endauth
                 @endif
                 @auth
+                <a name="experience"></a>
                 <experience-slideshow :user="true"></experience-slideshow>
                 @endauth
                 @guest
+                <a name="experience"></a>
                 <experience-slideshow :user="false"></experience-slideshow>
                 @endguest
                 @if (sizeof($sections) >= 2)
