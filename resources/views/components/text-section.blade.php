@@ -21,6 +21,6 @@
             </div>
         </div>
         <img src="{{ isset($section->img_src) ? asset($section->img_src) : asset('/images/default.jpg') }}"
-         alt="{{ $section->img_alt ?? '' }}" class="w-72 h-72 block ml-auto mr-auto rounded-lg border-blue-800 border-4">
+         alt="{{ $section->img_alt ?? '' }}" class="w-56 h-72 block ml-auto mr-auto rounded-lg border-blue-800 border-4">
     </div>
 </div>
