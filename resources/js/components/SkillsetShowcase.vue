@@ -19,7 +19,8 @@
 	            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 	        </p>
     	</div>
-        <div class="flex justify-center p-5">
+        <div v-if="user"
+        	 class="flex justify-center p-5">
 		    <Modal class="inline" 
 		    	   button_classes="bg-blue-200 rounded-lg p-3 border border-blue-800">
 		        <template #button_text>
@@ -62,6 +63,7 @@
 
 	export default {
 		name: 'SkillsetShowcase',
+		props: ['user'],
 		components: {
 			Modal,
 			SkillsetShowcaseForm
