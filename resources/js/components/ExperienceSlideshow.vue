@@ -58,7 +58,13 @@
 								    <img :src="position.img_src"
 								    	 :alt="position.img_alt" 
 								    	 class="w-full h-56 ml-auto mr-auto mb-5 rounded-lg border border-blue-800 md:w-1/2">
-					        		<div v-html="position.description">
+							    	<div>
+								    	<h2 class="font-bold text-2xl"
+								    		v-text="position.company_name"></h2>
+								    	<span class="italic"
+								    		  v-text="position.position"></span>
+					        			<div v-html="position.description">
+							    	</div>
 					        		</div>
 					        	</div>
 					        </template>

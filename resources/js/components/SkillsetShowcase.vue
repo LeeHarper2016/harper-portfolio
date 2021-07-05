@@ -1,25 +1,11 @@
 <template>
     <div class="p-8 w-full">
-    	<div class="text-center md:text-left">
+    	<div class="text-center">
 	        <h2 class="inline-block font-bold text-3xl mb-3 mr-5">My Skillset</h2>
-	        <hr class="border-blue-800 w-full md:w-1/4">
-	        <p>
-	            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-	            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	        </p>
+	        <hr class="border-blue-800 w-full ml-auto mr-auto md:w-1/4">
     	</div>
-        <div class="flex justify-center p-5">
+        <div v-if="user"
+        	 class="flex justify-center p-5">
 		    <Modal class="inline" 
 		    	   button_classes="bg-blue-200 rounded-lg p-3 border border-blue-800">
 		        <template #button_text>
@@ -36,10 +22,7 @@
         <div class="flex flex-wrap justify-center w-2/3 mr-auto ml-auto">
         	<div v-for="skill of skills"
         		 :key="skill.id"
-        		 class="text-center m-5">
-        		<img :src="skill.img_src"
-        		 	 :alt="skill.img_alt"
-        		 	 class="">
+        		 class="text-center m-5 rounded-md bg-blue-300 border border-blue-800 p-3">
         		<span v-text="skill.name"
         			  class="w-full text-xl font-bold"></span>
     		</div>
@@ -62,6 +45,7 @@
 
 	export default {
 		name: 'SkillsetShowcase',
+		props: ['user'],
 		components: {
 			Modal,
 			SkillsetShowcaseForm

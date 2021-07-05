@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\SkillRequest;
 use App\Models\Skill;
 
+use Intervention\Image\ImageManagerStatic as Image;
+
 class SkillController extends Controller
 {
     /****************************************************************************************************
@@ -20,12 +22,8 @@ class SkillController extends Controller
     ****************************************************************************************************/
     public function store(SkillRequest $request) {
         $skill = Skill::create([
-            'name' => $request->skill_name,
-            'img_src' => 'images/uploaded/' . $request->image->hashName(),
-            'img_alt' => $request->img_alt
+            'name' => $request->name
         ]);
-
-        $request->image->store('/images/uploaded');
 
         return json_encode($skill);
     }

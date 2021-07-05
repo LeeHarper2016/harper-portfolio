@@ -7,7 +7,10 @@
 
         <title>{{ env('APP_NAME') }}</title>
 
-        <!-- Fonts -->
+        <!-- Favicon -->
+        <link rel=“shortcut icon” type=“image/x-icon” href=“favicon.ico”>
+
+        <!-- Styles -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 
@@ -26,9 +29,9 @@
                 <navbar-menu :user="false"></navbar-menu>
                 @endguest
                 <div class="flex flex-col w-full h-full justify-center mr-auto ml-auto items-center">
-                    <div class="flex flex-col justify-around w-1/3 h-1/3 bg-white bg-opacity-80 rounded-xl p-5 text-center">
-                        <h1 class="block font-bold text-4xl underline">Page Header</h1>
-                        <h2 class="block font-bold text-3xl underline">Page Subheader</h2>
+                    <div class="flex flex-col justify-around w-2/3 h-1/3 bg-white bg-opacity-80 rounded-xl p-5 text-center md:w-1/3 md:h-1/3">
+                        <h1 class="block font-bold text-xl underline md:text-4xl">Page Header</h1>
+                        <h2 class="block font-bold text-lg underline md:text-3xl">Page Subheader</h2>
                     </div>
                 </div>
             </header>
@@ -38,24 +41,28 @@
                     @component('components.text-section', ['section' => $sections[0]])
                     @endcomponent
                 @else
-                    <div class="p-5 w-full">
-                        <modal class="inline" button_classes="block p-1.5 bg-blue-200 rounded-lg border border-blue-800 text-center ml-auto mr-auto">
-                            <template #button_text>
-                                Add About Section
-                            </template>
-                            <template #header>
-                                Add "About" Section
-                            </template>
-                            <template #content>
-                                <x-edit-section-form anchor="about" /> 
-                            </template>
-                        </modal>
-                    </div>
+                    @auth
+                        <div class="p-5 w-full">
+                            <modal class="inline" button_classes="block p-1.5 bg-blue-200 rounded-lg border border-blue-800 text-center ml-auto mr-auto">
+                                <template #button_text>
+                                    Add About Section
+                                </template>
+                                <template #header>
+                                    Add "About" Section
+                                </template>
+                                <template #content>
+                                    <x-edit-section-form anchor="about" /> 
+                                </template>
+                            </modal>
+                        </div>
+                    @endauth
                 @endif
                 @auth
+                <a name="experience"></a>
                 <experience-slideshow :user="true"></experience-slideshow>
                 @endauth
                 @guest
+                <a name="experience"></a>
                 <experience-slideshow :user="false"></experience-slideshow>
                 @endguest
                 @if (sizeof($sections) >= 2)
@@ -63,22 +70,29 @@
                     @component('components.text-section', ['section' => $sections[1]])
                     @endcomponent
                 @else
-                    <div class="p-5 w-full">
-                        <modal class="inline" button_classes="block p-1.5 bg-blue-200 rounded-lg border border-blue-800 text-center ml-auto mr-auto">
-                            <template #button_text>
-                                Add Education Section
-                            </template>
-                            <template #header>
-                                Add "Education" Section
-                            </template>
-                            <template #content>
-                                <x-edit-section-form anchor="education" /> 
-                            </template>
-                        </modal>
-                    </div>
+                    @auth
+                        <div class="p-5 w-full">
+                            <modal class="inline" button_classes="block p-1.5 bg-blue-200 rounded-lg border border-blue-800 text-center ml-auto mr-auto">
+                                <template #button_text>
+                                    Add Education Section
+                                </template>
+                                <template #header>
+                                    Add "Education" Section
+                                </template>
+                                <template #content>
+                                    <x-edit-section-form anchor="education" /> 
+                                </template>
+                            </modal>
+                        </div>
+                    @endauth
                 @endif
                 <a name="skills"></a>
-                <skillset-showcase></skillset-showcase>
+                @auth
+                    <skillset-showcase :user="true"></skillset-showcase>
+                @endauth
+                @guest
+                    <skillset-showcase :user="false"></skillset-showcase>
+                @endguest
                 <a name="contact"></a>
                 <contact-section></contact-section>
             </main>

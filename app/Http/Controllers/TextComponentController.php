@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\TextComponentRequest;
 use App\Models\TextComponent;
 
+use Intervention\Image\ImageManagerStatic as Image;
+
 class TextComponentController extends Controller
 {
     /******************************************************************************************************************************************************
@@ -31,7 +33,9 @@ class TextComponentController extends Controller
             "img_alt" => $request->img_alt
         ]);
 
-        $componentImage->store('/images/uploaded');
+        $compressedImage = Image::make($componentImage->getRealPath());
+        $compressedImage->resize(350, 350);
+        $compressedImage->save($component->img_src);
 
         return back();
     }

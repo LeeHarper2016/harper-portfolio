@@ -1,38 +1,20 @@
 <template>
-	<form action="/skills" 
+	<form @submit.prevent="submitSkill"
+		  action="/skills" 
 		  method="POST" 
 		  ref="skill_form"
 		  class="flex flex-col items-center space-y-6 font-normal" 
-		  enctype="multipart/form-data"
-		  @submit.prevent="submitSkill">
+		  enctype="multipart/form-data">
 		  <input type="hidden"
 		  		 name="_token"
 		  		 :value="csrfToken">
-        <label for="skill_name">
+        <label for="name">
             Skill Name:
             <input type="text" 
-            	   name="skill_name" 
-            	   id="skill_name" 
+            	   name="name" 
+            	   id="name" 
             	   class="border rounded-md block p-1.5"
             	   placeholder="HTML">
-        </label>
-        <label for="image">
-            Skill Image:
-            <input type="file" 
-            	   name="image" 
-            	   id="image" 
-            	   class="border rounded-md block p-1.5">
-        </label>
-        <label for="img_alt">
-            Image Description:
-            <textarea cols="50" 
-            		  rows="5" 
-            		  id="img_alt" 
-            		  name="img_alt" 
-            		  class="border rounded-md block p-1.5"
-            	   	  placeholder="A short description of the image uploaded.">
-                
-            </textarea>
         </label>
         <button type="submit" 
         		class="border border-blue-800 rounded-lg p-3 bg-blue-300">
