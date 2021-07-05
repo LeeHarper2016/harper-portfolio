@@ -30,6 +30,7 @@ class ClientMessaged extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.client');
+        return $this->subject('You have recieved a message.')
+                ->view('mail.client');
     }
 }
