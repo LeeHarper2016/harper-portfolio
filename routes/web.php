@@ -26,6 +26,7 @@ Route::post('/login', [AuthController::class, 'logInUser'])->middleware(['thrott
 Route::get('/logout', [AuthController::class, 'logOutUser']);
 
 Route::post('/component/text', [TextComponentController::class, 'store'])->middleware(['can:create,App\Models\TextComponent']);
+Route::patch('/component/text/{component}', [TextComponentController::class, 'update'])->middleware(['can:update,component']);
 
 Route::post('/positions', [PositionController::class, 'store'])->middleware(['can:create,App\Models\Position']);
 
