@@ -11,7 +11,8 @@
                     Edit Section
                 </template>
                 <template #content>
-                    <x-edit-section-form anchor="{{ $section->name }}" /> 
+                    @component('components.edit-section-form', ['section' => $section])
+                    @endcomponent
                 </template>
             </modal>
             @endauth
