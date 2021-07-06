@@ -1,6 +1,6 @@
 <template>
     <Modal class="inline" 
-    	   button_classes="bg-blue-400 rounded-lg p-3 border border-blue-800">
+    	   button_classes="bg-blue-300 rounded-lg p-3 border border-blue-800">
         <template #button_text>
             Add Position
         </template>
