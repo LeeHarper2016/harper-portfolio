@@ -51,7 +51,7 @@
                                     Add "About" Section
                                 </template>
                                 <template #content>
-                                    <x-edit-section-form anchor="about" /> 
+                                    <x-add-section-form anchor="about" /> 
                                 </template>
                             </modal>
                         </div>
@@ -80,7 +80,7 @@
                                     Add "Education" Section
                                 </template>
                                 <template #content>
-                                    <x-edit-section-form anchor="education" /> 
+                                    <x-add-section-form anchor="education" /> 
                                 </template>
                             </modal>
                         </div>
