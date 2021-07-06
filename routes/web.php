@@ -31,6 +31,7 @@ Route::patch('/component/text/{component}', [TextComponentController::class, 'up
 Route::post('/positions', [PositionController::class, 'store'])->middleware(['can:create,App\Models\Position']);
 
 Route::post('/skills', [SkillController::class, 'store'])->middleware(['can:create,App\Models\Skill']);;
+Route::delete('/skills/{skill}', [SkillController::class, 'destroy'])->middleware(['can:delete,skill']);;
 
 Route::post('/contact', [ContactController::class, 'sendMail'])->middleware('throttle:contact');
 
