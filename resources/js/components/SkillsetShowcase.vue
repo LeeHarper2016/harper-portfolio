@@ -5,7 +5,7 @@
             <div v-if="user"
             	 class="inline">
 			    <Modal class="inline"
-			    	   button_classes="bg-blue-200 rounded-lg p-3 border border-blue-800">
+			    	   button_classes="bg-blue-300 rounded-lg p-3 border border-blue-800">
 			        <template #button_text>
 			            Edit Skills
 			        </template>
@@ -19,7 +19,7 @@
 			        	<div class="flex flex-wrap justify-center w-2/3 mr-auto ml-auto">
 				        	<div v-for="skill of skills"
 				        		 :key="skill._id"
-				        		 class="w-48 text-center m-5 rounded-md bg-blue-300 border border-blue-800 p-3">
+				        		 class="w-48 text-center m-5 rounded-md bg-blue-200 border border-blue-800 p-3">
 				        		 <span class="w-full text-xl font-bold">{{ skill.name }}</span>
 				        		 <span @click="deleteSkill(skill._id)"
 				        		 	   class="block cursor-pointer p-1.5 bg-red-300 rounded-md border border-2 border-black">Delete</span>
@@ -34,7 +34,7 @@
         <div class="flex flex-wrap justify-center w-2/3 mr-auto ml-auto">
         	<div v-for="skill of skills"
         		 :key="skill._id"
-        		 class="w-48 text-center m-5 rounded-md bg-blue-300 border border-blue-800 p-3">
+        		 class="w-48 text-center m-5 rounded-md bg-blue-200 border border-blue-800 p-3">
         		<span v-text="skill.name"
         			  class="w-full text-xl font-bold"></span>
     		</div>
