@@ -30,8 +30,8 @@
                 @endguest
                 <div class="flex flex-col w-full h-full justify-center mr-auto ml-auto items-center">
                     <div class="flex flex-col justify-around w-2/3 h-1/3 bg-white bg-opacity-80 rounded-xl p-5 text-center md:w-1/3 md:h-1/3">
-                        <h1 class="block font-bold text-xl underline md:text-4xl">Page Header</h1>
-                        <h2 class="block font-bold text-lg underline md:text-3xl">Page Subheader</h2>
+                        <h1 class="block font-bold text-xl underline md:text-4xl">{{ env('PAGE_HEADER') }}</h1>
+                        <h2 class="block font-bold text-lg underline md:text-3xl">{{ env('PAGE_SUBHEADER') }}</h2>
                     </div>
                 </div>
             </header>
