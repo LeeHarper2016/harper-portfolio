@@ -30,6 +30,23 @@ class SkillController extends Controller
 
     /****************************************************************************************************
      * 
+     * Function: SkillController.destroy().
+     * Purpose: With the given ID, deletes the skill from the database.
+     * Precondition: The skill must exist inside of the database.
+     * Postcondition: The skill is deleted from the database.
+     * 
+     * @param Skill $skill The skill that is to be deleted.
+     * @returns json The JSON object that details the newly-stored skill.
+     * 
+    ****************************************************************************************************/
+    public function destroy(Skill $skill) {
+        $skill->delete();
+
+        return json_encode($skill);
+    }
+
+    /****************************************************************************************************
+     * 
      * Function: SkillController.viewJson().
      * Purpose: Retrieves a collection of all skills within the database, then returns it to the user as
      *          a JSON array.

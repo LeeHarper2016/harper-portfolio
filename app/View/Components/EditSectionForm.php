@@ -2,20 +2,21 @@
 
 namespace App\View\Components;
 
+use App\Models\TextComponent;
 use Illuminate\View\Component;
 
 class EditSectionForm extends Component
 {
-    public $anchor;
+    public $section;
     
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($anchor)
+    public function __construct(TextComponent $section)
     {
-        $this->anchor = $anchor;
+        $this->section = $section;
     }
 
     /**

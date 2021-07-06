@@ -24,7 +24,7 @@
 			    	</div>
 			    	<div class="flex w-full justify-around">
 		    		    <Modal class="inline" 
-					    	   button_classes="bg-blue-400 rounded-lg p-3 border border-blue-800"
+					    	   button_classes="bg-blue-300 rounded-lg p-3 border border-blue-800"
 							   @open="toggleInterval"
 							   @close="toggleInterval">
 					        <template #button_text>
@@ -43,7 +43,7 @@
 					        </template>
 					    </Modal>
 		    		    <Modal class="inline" 
-					    	   button_classes="bg-blue-400 rounded-lg p-3 border border-blue-800"
+					    	   button_classes="bg-blue-300 rounded-lg p-3 border border-blue-800"
 							   @open="toggleInterval"
 							   @close="toggleInterval">
 					        <template #button_text>

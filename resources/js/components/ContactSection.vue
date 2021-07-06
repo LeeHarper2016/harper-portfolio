@@ -8,7 +8,7 @@
 		<input type="hidden"
 			   name="_token"
 			   :value="csrfToken">
-        <div class="flex flex-col justify-between w-2/3 md:w-1/3 md:flex-row">
+        <div class="flex flex-col justify-between w-full md:w-1/3">
             <label for="name" 
             	   class="flex flex-col">
                 Name:

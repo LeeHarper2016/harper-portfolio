@@ -4,16 +4,18 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class TextComponentForm extends Component
+class AddSectionForm extends Component
 {
+    public $anchor;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(string $anchor)
     {
-        //
+        $this->anchor = $anchor;
     }
 
     /**
@@ -23,6 +25,6 @@ class TextComponentForm extends Component
      */
     public function render()
     {
-        return view('components.text-component-form');
+        return view('components.add-section-form');
     }
 }

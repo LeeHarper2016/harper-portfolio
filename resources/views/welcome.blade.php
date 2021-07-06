@@ -43,7 +43,7 @@
                 @else
                     @auth
                         <div class="p-5 w-full">
-                            <modal class="inline" button_classes="block p-1.5 bg-blue-200 rounded-lg border border-blue-800 text-center ml-auto mr-auto">
+                            <modal class="inline" button_classes="block p-1.5 bg-blue-300 rounded-lg border border-blue-800 text-center ml-auto mr-auto">
                                 <template #button_text>
                                     Add About Section
                                 </template>
@@ -51,7 +51,7 @@
                                     Add "About" Section
                                 </template>
                                 <template #content>
-                                    <x-edit-section-form anchor="about" /> 
+                                    <x-add-section-form anchor="about" /> 
                                 </template>
                             </modal>
                         </div>
@@ -72,7 +72,7 @@
                 @else
                     @auth
                         <div class="p-5 w-full">
-                            <modal class="inline" button_classes="block p-1.5 bg-blue-200 rounded-lg border border-blue-800 text-center ml-auto mr-auto">
+                            <modal class="inline" button_classes="block p-1.5 bg-blue-300 rounded-lg border border-blue-800 text-center ml-auto mr-auto">
                                 <template #button_text>
                                     Add Education Section
                                 </template>
@@ -80,7 +80,7 @@
                                     Add "Education" Section
                                 </template>
                                 <template #content>
-                                    <x-edit-section-form anchor="education" /> 
+                                    <x-add-section-form anchor="education" /> 
                                 </template>
                             </modal>
                         </div>

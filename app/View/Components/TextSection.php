@@ -13,7 +13,7 @@ class TextSection extends Component
      *
      * @return void
      */
-    public function __construct($section)
+    public function __construct(TextComponent $section)
     {
         $this->section = $section;
     }

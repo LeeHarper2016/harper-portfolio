@@ -3,7 +3,7 @@
         <div class="text-center md:text-left">
             <h2 class="inline-block font-bold text-3xl mb-3 mr-5">{{ $section->title ?? 'Default Title' }}</h2>
             @auth
-            <modal class="inline" button_classes="p-1.5 bg-red-400 rounded-lg border-blue-800 text-center">
+            <modal class="inline" button_classes="p-1.5 bg-blue-300 rounded-lg border border-blue-800 text-center">
                 <template #button_text>
                     Edit Section
                 </template>
@@ -11,7 +11,8 @@
                     Edit Section
                 </template>
                 <template #content>
-                    <x-edit-section-form anchor="{{ $section->name }}" /> 
+                    @component('components.edit-section-form', ['section' => $section])
+                    @endcomponent
                 </template>
             </modal>
             @endauth
