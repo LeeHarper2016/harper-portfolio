@@ -18,7 +18,7 @@
         </label>
         <button type="submit" 
         		class="border border-blue-800 rounded-lg p-3 bg-blue-300">
-            Submit
+            Add Skill
         </button>
     </form>
 </template>
